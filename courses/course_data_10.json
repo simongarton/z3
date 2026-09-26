@@ -1,0 +1,93 @@
+[
+    {
+        "id": 1,
+        "name": "Course 1",
+        "schedule": [
+            "Monday 9:00-10:00",
+            "Wednesday 1:00-2:00",
+            "Thursday 3:00-4:00",
+            "Friday 11:00-12:00"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Course 2",
+        "schedule": [
+            "Wednesday 3:00-4:00",
+            "Thursday 1:00-2:00"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Course 3",
+        "schedule": [
+            "Monday 3:00-4:00",
+            "Tuesday 3:00-4:00",
+            "Wednesday 2:00-3:00",
+            "Thursday 1:00-2:00"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Course 4",
+        "schedule": [
+            "Monday 10:00-11:00",
+            "Tuesday 11:00-12:00",
+            "Thursday 11:00-12:00"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Course 5",
+        "schedule": [
+            "Tuesday 2:00-3:00",
+            "Thursday 9:00-10:00",
+            "Friday 2:00-3:00"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Course 6",
+        "schedule": [
+            "Monday 10:00-11:00",
+            "Tuesday 11:00-12:00",
+            "Thursday 9:00-10:00",
+            "Friday 3:00-4:00"
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Course 7",
+        "schedule": [
+            "Monday 10:00-11:00",
+            "Tuesday 1:00-2:00",
+            "Wednesday 10:00-11:00",
+            "Thursday 3:00-4:00",
+            "Friday 10:00-11:00"
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Course 8",
+        "schedule": [
+            "Monday 11:00-12:00",
+            "Thursday 2:00-3:00",
+            "Friday 11:00-12:00"
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Course 9",
+        "schedule": [
+            "Monday 2:00-3:00"
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Course 10",
+        "schedule": [
+            "Tuesday 9:00-10:00",
+            "Wednesday 3:00-4:00"
+        ]
+    }
+]

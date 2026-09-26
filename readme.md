@@ -60,6 +60,16 @@ But I liked it, because I got to learn how to use z3.
 
 [AoC2025.10](./advent-of-code/2025-10.1-optimise.py)
 
+### course planner
+
+Now I'm working up to the actual example I want to solve.  Here's a halfway step.
+
+I'm a student at a university. I want to first list all combinations of courses offered that I could take - they happen on certain days and times, and I need to avoid clashes - and then second optimise it, so I'm spending the most possible time in class (doh !)
+
+## presentations
+
+https://theory.stanford.edu/~nikolaj/nus.html#/sec-z3 gets into maths quickly.
+
 ## older stuff
 
 https://ericpony.github.io/z3py-tutorial/guide-examples.htm

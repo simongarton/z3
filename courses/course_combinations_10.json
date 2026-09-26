@@ -1,0 +1,995 @@
+[
+    [
+        "Course 1"
+    ],
+    [
+        "Course 7"
+    ],
+    [
+        "Course 8"
+    ],
+    [
+        "Course 2"
+    ],
+    [
+        "Course 3"
+    ],
+    [
+        "Course 10"
+    ],
+    [
+        "Course 4"
+    ],
+    [
+        "Course 5"
+    ],
+    [
+        "Course 9"
+    ],
+    [
+        "Course 6"
+    ],
+    [
+        "Course 1",
+        "Course 6"
+    ],
+    [
+        "Course 1",
+        "Course 2"
+    ],
+    [
+        "Course 1",
+        "Course 3"
+    ],
+    [
+        "Course 1",
+        "Course 4"
+    ],
+    [
+        "Course 1",
+        "Course 10"
+    ],
+    [
+        "Course 1",
+        "Course 5"
+    ],
+    [
+        "Course 1",
+        "Course 9"
+    ],
+    [
+        "Course 8",
+        "Course 9"
+    ],
+    [
+        "Course 7",
+        "Course 9"
+    ],
+    [
+        "Course 6",
+        "Course 9"
+    ],
+    [
+        "Course 2",
+        "Course 9"
+    ],
+    [
+        "Course 2",
+        "Course 7",
+        "Course 9"
+    ],
+    [
+        "Course 3",
+        "Course 7",
+        "Course 9"
+    ],
+    [
+        "Course 7",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 5",
+        "Course 7",
+        "Course 9"
+    ],
+    [
+        "Course 5",
+        "Course 7"
+    ],
+    [
+        "Course 5",
+        "Course 7",
+        "Course 8"
+    ],
+    [
+        "Course 5",
+        "Course 8"
+    ],
+    [
+        "Course 4",
+        "Course 5",
+        "Course 8"
+    ],
+    [
+        "Course 2",
+        "Course 4",
+        "Course 8"
+    ],
+    [
+        "Course 2",
+        "Course 4",
+        "Course 5"
+    ],
+    [
+        "Course 2",
+        "Course 5",
+        "Course 8"
+    ],
+    [
+        "Course 2",
+        "Course 4",
+        "Course 5",
+        "Course 8"
+    ],
+    [
+        "Course 2",
+        "Course 5"
+    ],
+    [
+        "Course 3",
+        "Course 5"
+    ],
+    [
+        "Course 3",
+        "Course 4",
+        "Course 5"
+    ],
+    [
+        "Course 3",
+        "Course 4",
+        "Course 10"
+    ],
+    [
+        "Course 4",
+        "Course 5",
+        "Course 10"
+    ],
+    [
+        "Course 3",
+        "Course 4",
+        "Course 5",
+        "Course 10"
+    ],
+    [
+        "Course 3",
+        "Course 5",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 4",
+        "Course 5",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 3",
+        "Course 4",
+        "Course 5",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 3",
+        "Course 5",
+        "Course 7",
+        "Course 9"
+    ],
+    [
+        "Course 3",
+        "Course 5",
+        "Course 7",
+        "Course 10"
+    ],
+    [
+        "Course 3",
+        "Course 7",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 3",
+        "Course 5",
+        "Course 7",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 5",
+        "Course 7",
+        "Course 10"
+    ],
+    [
+        "Course 5",
+        "Course 10"
+    ],
+    [
+        "Course 1",
+        "Course 5",
+        "Course 10"
+    ],
+    [
+        "Course 2",
+        "Course 5",
+        "Course 7"
+    ],
+    [
+        "Course 1",
+        "Course 2",
+        "Course 5"
+    ],
+    [
+        "Course 2",
+        "Course 6"
+    ],
+    [
+        "Course 6",
+        "Course 8"
+    ],
+    [
+        "Course 2",
+        "Course 6",
+        "Course 8"
+    ],
+    [
+        "Course 2",
+        "Course 8"
+    ],
+    [
+        "Course 7",
+        "Course 8"
+    ],
+    [
+        "Course 2",
+        "Course 7",
+        "Course 8"
+    ],
+    [
+        "Course 2",
+        "Course 7"
+    ],
+    [
+        "Course 3",
+        "Course 7"
+    ],
+    [
+        "Course 2",
+        "Course 4"
+    ],
+    [
+        "Course 3",
+        "Course 4"
+    ],
+    [
+        "Course 3",
+        "Course 4",
+        "Course 9"
+    ],
+    [
+        "Course 4",
+        "Course 5",
+        "Course 9"
+    ],
+    [
+        "Course 3",
+        "Course 4",
+        "Course 5",
+        "Course 9"
+    ],
+    [
+        "Course 1",
+        "Course 3",
+        "Course 4",
+        "Course 5"
+    ],
+    [
+        "Course 1",
+        "Course 3",
+        "Course 5"
+    ],
+    [
+        "Course 1",
+        "Course 3",
+        "Course 5",
+        "Course 9"
+    ],
+    [
+        "Course 1",
+        "Course 4",
+        "Course 5",
+        "Course 9"
+    ],
+    [
+        "Course 1",
+        "Course 3",
+        "Course 4",
+        "Course 9"
+    ],
+    [
+        "Course 1",
+        "Course 3",
+        "Course 4",
+        "Course 5",
+        "Course 9"
+    ],
+    [
+        "Course 1",
+        "Course 3",
+        "Course 4",
+        "Course 5",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 1",
+        "Course 3",
+        "Course 5",
+        "Course 10"
+    ],
+    [
+        "Course 1",
+        "Course 4",
+        "Course 5",
+        "Course 10"
+    ],
+    [
+        "Course 1",
+        "Course 3",
+        "Course 4",
+        "Course 5",
+        "Course 10"
+    ],
+    [
+        "Course 3",
+        "Course 4",
+        "Course 5",
+        "Course 8"
+    ],
+    [
+        "Course 3",
+        "Course 8"
+    ],
+    [
+        "Course 3",
+        "Course 4",
+        "Course 8"
+    ],
+    [
+        "Course 4",
+        "Course 8"
+    ],
+    [
+        "Course 4",
+        "Course 8",
+        "Course 10"
+    ],
+    [
+        "Course 4",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 4",
+        "Course 8",
+        "Course 9"
+    ],
+    [
+        "Course 4",
+        "Course 8",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 3",
+        "Course 8",
+        "Course 10"
+    ],
+    [
+        "Course 3",
+        "Course 4",
+        "Course 8",
+        "Course 10"
+    ],
+    [
+        "Course 3",
+        "Course 7",
+        "Course 8",
+        "Course 10"
+    ],
+    [
+        "Course 8",
+        "Course 10"
+    ],
+    [
+        "Course 7",
+        "Course 8",
+        "Course 10"
+    ],
+    [
+        "Course 7",
+        "Course 10"
+    ],
+    [
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 4",
+        "Course 10"
+    ],
+    [
+        "Course 6",
+        "Course 10"
+    ],
+    [
+        "Course 1",
+        "Course 6",
+        "Course 10"
+    ],
+    [
+        "Course 1",
+        "Course 3",
+        "Course 10"
+    ],
+    [
+        "Course 1",
+        "Course 3",
+        "Course 4"
+    ],
+    [
+        "Course 1",
+        "Course 3",
+        "Course 4",
+        "Course 10"
+    ],
+    [
+        "Course 1",
+        "Course 3",
+        "Course 4",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 1",
+        "Course 4",
+        "Course 9"
+    ],
+    [
+        "Course 1",
+        "Course 2",
+        "Course 4",
+        "Course 9"
+    ],
+    [
+        "Course 1",
+        "Course 2",
+        "Course 4",
+        "Course 5",
+        "Course 9"
+    ],
+    [
+        "Course 1",
+        "Course 4",
+        "Course 5"
+    ],
+    [
+        "Course 1",
+        "Course 2",
+        "Course 4"
+    ],
+    [
+        "Course 1",
+        "Course 2",
+        "Course 4",
+        "Course 5"
+    ],
+    [
+        "Course 4",
+        "Course 5"
+    ],
+    [
+        "Course 4",
+        "Course 5",
+        "Course 8",
+        "Course 10"
+    ],
+    [
+        "Course 3",
+        "Course 4",
+        "Course 5",
+        "Course 8",
+        "Course 10"
+    ],
+    [
+        "Course 3",
+        "Course 4",
+        "Course 8",
+        "Course 9"
+    ],
+    [
+        "Course 3",
+        "Course 7",
+        "Course 8"
+    ],
+    [
+        "Course 3",
+        "Course 6",
+        "Course 8"
+    ],
+    [
+        "Course 3",
+        "Course 5",
+        "Course 8"
+    ],
+    [
+        "Course 3",
+        "Course 5",
+        "Course 7"
+    ],
+    [
+        "Course 3",
+        "Course 5",
+        "Course 7",
+        "Course 8"
+    ],
+    [
+        "Course 3",
+        "Course 5",
+        "Course 8",
+        "Course 10"
+    ],
+    [
+        "Course 3",
+        "Course 5",
+        "Course 7",
+        "Course 8",
+        "Course 10"
+    ],
+    [
+        "Course 5",
+        "Course 8",
+        "Course 10"
+    ],
+    [
+        "Course 5",
+        "Course 7",
+        "Course 8",
+        "Course 10"
+    ],
+    [
+        "Course 5",
+        "Course 8",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 7",
+        "Course 8",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 5",
+        "Course 7",
+        "Course 8",
+        "Course 9"
+    ],
+    [
+        "Course 5",
+        "Course 7",
+        "Course 8",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 8",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 6",
+        "Course 8",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 3",
+        "Course 8",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 3",
+        "Course 7",
+        "Course 8",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 3",
+        "Course 6",
+        "Course 8",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 3",
+        "Course 8",
+        "Course 9"
+    ],
+    [
+        "Course 3",
+        "Course 7",
+        "Course 8",
+        "Course 9"
+    ],
+    [
+        "Course 3",
+        "Course 6",
+        "Course 8",
+        "Course 9"
+    ],
+    [
+        "Course 3",
+        "Course 6"
+    ],
+    [
+        "Course 3",
+        "Course 10"
+    ],
+    [
+        "Course 3",
+        "Course 7",
+        "Course 10"
+    ],
+    [
+        "Course 3",
+        "Course 6",
+        "Course 10"
+    ],
+    [
+        "Course 3",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 3",
+        "Course 6",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 6",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 5",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 5",
+        "Course 7",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 5",
+        "Course 9"
+    ],
+    [
+        "Course 2",
+        "Course 5",
+        "Course 9"
+    ],
+    [
+        "Course 2",
+        "Course 5",
+        "Course 7",
+        "Course 9"
+    ],
+    [
+        "Course 1",
+        "Course 5",
+        "Course 9"
+    ],
+    [
+        "Course 1",
+        "Course 2",
+        "Course 5",
+        "Course 9"
+    ],
+    [
+        "Course 1",
+        "Course 5",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 4",
+        "Course 5",
+        "Course 8",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 2",
+        "Course 4",
+        "Course 8",
+        "Course 9"
+    ],
+    [
+        "Course 6",
+        "Course 8",
+        "Course 10"
+    ],
+    [
+        "Course 3",
+        "Course 6",
+        "Course 8",
+        "Course 10"
+    ],
+    [
+        "Course 1",
+        "Course 3",
+        "Course 6",
+        "Course 10"
+    ],
+    [
+        "Course 1",
+        "Course 3",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 1",
+        "Course 3",
+        "Course 6",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 1",
+        "Course 3",
+        "Course 5",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 3",
+        "Course 5",
+        "Course 10"
+    ],
+    [
+        "Course 1",
+        "Course 4",
+        "Course 10"
+    ],
+    [
+        "Course 1",
+        "Course 4",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 4",
+        "Course 9"
+    ],
+    [
+        "Course 2",
+        "Course 4",
+        "Course 9"
+    ],
+    [
+        "Course 3",
+        "Course 4",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 3",
+        "Course 4",
+        "Course 8",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 2",
+        "Course 8",
+        "Course 9"
+    ],
+    [
+        "Course 7",
+        "Course 8",
+        "Course 9"
+    ],
+    [
+        "Course 2",
+        "Course 7",
+        "Course 8",
+        "Course 9"
+    ],
+    [
+        "Course 6",
+        "Course 8",
+        "Course 9"
+    ],
+    [
+        "Course 2",
+        "Course 6",
+        "Course 9"
+    ],
+    [
+        "Course 2",
+        "Course 6",
+        "Course 8",
+        "Course 9"
+    ],
+    [
+        "Course 2",
+        "Course 5",
+        "Course 7",
+        "Course 8"
+    ],
+    [
+        "Course 5",
+        "Course 8",
+        "Course 9"
+    ],
+    [
+        "Course 2",
+        "Course 5",
+        "Course 8",
+        "Course 9"
+    ],
+    [
+        "Course 2",
+        "Course 5",
+        "Course 7",
+        "Course 8",
+        "Course 9"
+    ],
+    [
+        "Course 4",
+        "Course 5",
+        "Course 8",
+        "Course 9"
+    ],
+    [
+        "Course 2",
+        "Course 4",
+        "Course 5",
+        "Course 8",
+        "Course 9"
+    ],
+    [
+        "Course 3",
+        "Course 5",
+        "Course 8",
+        "Course 9"
+    ],
+    [
+        "Course 3",
+        "Course 5",
+        "Course 7",
+        "Course 8",
+        "Course 9"
+    ],
+    [
+        "Course 3",
+        "Course 4",
+        "Course 5",
+        "Course 8",
+        "Course 9"
+    ],
+    [
+        "Course 1",
+        "Course 2",
+        "Course 6"
+    ],
+    [
+        "Course 1",
+        "Course 3",
+        "Course 6"
+    ],
+    [
+        "Course 3",
+        "Course 9"
+    ],
+    [
+        "Course 1",
+        "Course 3",
+        "Course 9"
+    ],
+    [
+        "Course 3",
+        "Course 6",
+        "Course 9"
+    ],
+    [
+        "Course 1",
+        "Course 3",
+        "Course 6",
+        "Course 9"
+    ],
+    [
+        "Course 3",
+        "Course 5",
+        "Course 9"
+    ],
+    [
+        "Course 1",
+        "Course 2",
+        "Course 9"
+    ],
+    [
+        "Course 1",
+        "Course 6",
+        "Course 9"
+    ],
+    [
+        "Course 1",
+        "Course 2",
+        "Course 6",
+        "Course 9"
+    ],
+    [
+        "Course 2",
+        "Course 4",
+        "Course 5",
+        "Course 9"
+    ],
+    [
+        "Course 1",
+        "Course 4",
+        "Course 5",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 1",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 1",
+        "Course 6",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 3",
+        "Course 5",
+        "Course 8",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 3",
+        "Course 5",
+        "Course 7",
+        "Course 8",
+        "Course 9",
+        "Course 10"
+    ],
+    [
+        "Course 3",
+        "Course 4",
+        "Course 5",
+        "Course 8",
+        "Course 9",
+        "Course 10"
+    ]
+]

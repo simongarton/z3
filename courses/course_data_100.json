@@ -1,0 +1,849 @@
+[
+    {
+        "id": 1,
+        "name": "Course 1",
+        "schedule": [
+            "Wednesday 10:00-11:00",
+            "Friday 9:00-10:00"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Course 2",
+        "schedule": [
+            "Monday 1:00-2:00",
+            "Thursday 9:00-10:00",
+            "Friday 2:00-3:00"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Course 3",
+        "schedule": [
+            "Tuesday 11:00-12:00",
+            "Wednesday 11:00-12:00",
+            "Friday 1:00-2:00"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Course 4",
+        "schedule": [
+            "Monday 10:00-11:00",
+            "Tuesday 11:00-12:00",
+            "Thursday 10:00-11:00",
+            "Friday 11:00-12:00"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Course 5",
+        "schedule": []
+    },
+    {
+        "id": 6,
+        "name": "Course 6",
+        "schedule": [
+            "Thursday 2:00-3:00",
+            "Friday 10:00-11:00"
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Course 7",
+        "schedule": [
+            "Monday 11:00-12:00",
+            "Wednesday 11:00-12:00",
+            "Friday 1:00-2:00"
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Course 8",
+        "schedule": [
+            "Monday 3:00-4:00",
+            "Wednesday 10:00-11:00",
+            "Friday 1:00-2:00"
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Course 9",
+        "schedule": [
+            "Monday 2:00-3:00",
+            "Tuesday 11:00-12:00"
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Course 10",
+        "schedule": [
+            "Tuesday 11:00-12:00",
+            "Thursday 10:00-11:00"
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Course 11",
+        "schedule": [
+            "Monday 11:00-12:00",
+            "Wednesday 2:00-3:00",
+            "Thursday 2:00-3:00"
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Course 12",
+        "schedule": [
+            "Monday 9:00-10:00",
+            "Thursday 11:00-12:00",
+            "Friday 9:00-10:00"
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Course 13",
+        "schedule": [
+            "Monday 11:00-12:00",
+            "Wednesday 9:00-10:00"
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Course 14",
+        "schedule": [
+            "Wednesday 10:00-11:00"
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Course 15",
+        "schedule": [
+            "Wednesday 11:00-12:00",
+            "Thursday 3:00-4:00"
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Course 16",
+        "schedule": [
+            "Tuesday 11:00-12:00"
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Course 17",
+        "schedule": [
+            "Thursday 9:00-10:00"
+        ]
+    },
+    {
+        "id": 18,
+        "name": "Course 18",
+        "schedule": [
+            "Thursday 1:00-2:00"
+        ]
+    },
+    {
+        "id": 19,
+        "name": "Course 19",
+        "schedule": [
+            "Monday 10:00-11:00",
+            "Tuesday 2:00-3:00",
+            "Wednesday 3:00-4:00",
+            "Friday 10:00-11:00"
+        ]
+    },
+    {
+        "id": 20,
+        "name": "Course 20",
+        "schedule": [
+            "Monday 3:00-4:00"
+        ]
+    },
+    {
+        "id": 21,
+        "name": "Course 21",
+        "schedule": [
+            "Monday 1:00-2:00"
+        ]
+    },
+    {
+        "id": 22,
+        "name": "Course 22",
+        "schedule": [
+            "Thursday 3:00-4:00"
+        ]
+    },
+    {
+        "id": 23,
+        "name": "Course 23",
+        "schedule": [
+            "Tuesday 10:00-11:00",
+            "Thursday 1:00-2:00"
+        ]
+    },
+    {
+        "id": 24,
+        "name": "Course 24",
+        "schedule": [
+            "Monday 3:00-4:00",
+            "Tuesday 11:00-12:00",
+            "Thursday 10:00-11:00"
+        ]
+    },
+    {
+        "id": 25,
+        "name": "Course 25",
+        "schedule": [
+            "Monday 9:00-10:00",
+            "Tuesday 11:00-12:00",
+            "Wednesday 2:00-3:00"
+        ]
+    },
+    {
+        "id": 26,
+        "name": "Course 26",
+        "schedule": [
+            "Monday 10:00-11:00",
+            "Wednesday 1:00-2:00",
+            "Thursday 10:00-11:00",
+            "Friday 2:00-3:00"
+        ]
+    },
+    {
+        "id": 27,
+        "name": "Course 27",
+        "schedule": [
+            "Monday 1:00-2:00",
+            "Tuesday 2:00-3:00",
+            "Friday 1:00-2:00"
+        ]
+    },
+    {
+        "id": 28,
+        "name": "Course 28",
+        "schedule": [
+            "Thursday 11:00-12:00"
+        ]
+    },
+    {
+        "id": 29,
+        "name": "Course 29",
+        "schedule": [
+            "Monday 3:00-4:00",
+            "Wednesday 10:00-11:00",
+            "Thursday 2:00-3:00",
+            "Friday 9:00-10:00"
+        ]
+    },
+    {
+        "id": 30,
+        "name": "Course 30",
+        "schedule": [
+            "Wednesday 3:00-4:00",
+            "Thursday 1:00-2:00",
+            "Friday 1:00-2:00"
+        ]
+    },
+    {
+        "id": 31,
+        "name": "Course 31",
+        "schedule": [
+            "Monday 10:00-11:00",
+            "Thursday 11:00-12:00"
+        ]
+    },
+    {
+        "id": 32,
+        "name": "Course 32",
+        "schedule": [
+            "Tuesday 3:00-4:00",
+            "Wednesday 3:00-4:00"
+        ]
+    },
+    {
+        "id": 33,
+        "name": "Course 33",
+        "schedule": [
+            "Thursday 3:00-4:00",
+            "Friday 9:00-10:00"
+        ]
+    },
+    {
+        "id": 34,
+        "name": "Course 34",
+        "schedule": [
+            "Tuesday 2:00-3:00",
+            "Thursday 9:00-10:00"
+        ]
+    },
+    {
+        "id": 35,
+        "name": "Course 35",
+        "schedule": [
+            "Thursday 3:00-4:00",
+            "Friday 11:00-12:00"
+        ]
+    },
+    {
+        "id": 36,
+        "name": "Course 36",
+        "schedule": [
+            "Monday 9:00-10:00",
+            "Tuesday 2:00-3:00",
+            "Thursday 3:00-4:00",
+            "Friday 1:00-2:00"
+        ]
+    },
+    {
+        "id": 37,
+        "name": "Course 37",
+        "schedule": [
+            "Wednesday 1:00-2:00",
+            "Thursday 11:00-12:00"
+        ]
+    },
+    {
+        "id": 38,
+        "name": "Course 38",
+        "schedule": [
+            "Monday 2:00-3:00",
+            "Tuesday 10:00-11:00",
+            "Wednesday 1:00-2:00",
+            "Thursday 10:00-11:00",
+            "Friday 2:00-3:00"
+        ]
+    },
+    {
+        "id": 39,
+        "name": "Course 39",
+        "schedule": [
+            "Wednesday 2:00-3:00"
+        ]
+    },
+    {
+        "id": 40,
+        "name": "Course 40",
+        "schedule": [
+            "Monday 10:00-11:00",
+            "Wednesday 2:00-3:00",
+            "Thursday 10:00-11:00",
+            "Friday 10:00-11:00"
+        ]
+    },
+    {
+        "id": 41,
+        "name": "Course 41",
+        "schedule": [
+            "Tuesday 9:00-10:00"
+        ]
+    },
+    {
+        "id": 42,
+        "name": "Course 42",
+        "schedule": [
+            "Monday 10:00-11:00",
+            "Tuesday 9:00-10:00",
+            "Wednesday 1:00-2:00",
+            "Thursday 11:00-12:00"
+        ]
+    },
+    {
+        "id": 43,
+        "name": "Course 43",
+        "schedule": [
+            "Wednesday 10:00-11:00"
+        ]
+    },
+    {
+        "id": 44,
+        "name": "Course 44",
+        "schedule": [
+            "Tuesday 3:00-4:00",
+            "Wednesday 10:00-11:00",
+            "Thursday 1:00-2:00",
+            "Friday 3:00-4:00"
+        ]
+    },
+    {
+        "id": 45,
+        "name": "Course 45",
+        "schedule": [
+            "Tuesday 3:00-4:00",
+            "Friday 2:00-3:00"
+        ]
+    },
+    {
+        "id": 46,
+        "name": "Course 46",
+        "schedule": [
+            "Monday 11:00-12:00",
+            "Friday 1:00-2:00"
+        ]
+    },
+    {
+        "id": 47,
+        "name": "Course 47",
+        "schedule": [
+            "Monday 10:00-11:00",
+            "Thursday 1:00-2:00"
+        ]
+    },
+    {
+        "id": 48,
+        "name": "Course 48",
+        "schedule": [
+            "Monday 10:00-11:00",
+            "Tuesday 9:00-10:00",
+            "Thursday 3:00-4:00",
+            "Friday 11:00-12:00"
+        ]
+    },
+    {
+        "id": 49,
+        "name": "Course 49",
+        "schedule": [
+            "Monday 3:00-4:00",
+            "Tuesday 11:00-12:00",
+            "Wednesday 2:00-3:00",
+            "Thursday 9:00-10:00",
+            "Friday 10:00-11:00"
+        ]
+    },
+    {
+        "id": 50,
+        "name": "Course 50",
+        "schedule": [
+            "Monday 2:00-3:00",
+            "Wednesday 3:00-4:00"
+        ]
+    },
+    {
+        "id": 51,
+        "name": "Course 51",
+        "schedule": [
+            "Monday 11:00-12:00",
+            "Tuesday 11:00-12:00",
+            "Wednesday 3:00-4:00",
+            "Thursday 10:00-11:00",
+            "Friday 3:00-4:00"
+        ]
+    },
+    {
+        "id": 52,
+        "name": "Course 52",
+        "schedule": [
+            "Tuesday 1:00-2:00",
+            "Wednesday 10:00-11:00",
+            "Friday 9:00-10:00"
+        ]
+    },
+    {
+        "id": 53,
+        "name": "Course 53",
+        "schedule": [
+            "Monday 3:00-4:00",
+            "Tuesday 11:00-12:00",
+            "Wednesday 9:00-10:00"
+        ]
+    },
+    {
+        "id": 54,
+        "name": "Course 54",
+        "schedule": [
+            "Tuesday 3:00-4:00",
+            "Thursday 10:00-11:00",
+            "Friday 1:00-2:00"
+        ]
+    },
+    {
+        "id": 55,
+        "name": "Course 55",
+        "schedule": [
+            "Monday 2:00-3:00",
+            "Wednesday 10:00-11:00",
+            "Thursday 3:00-4:00"
+        ]
+    },
+    {
+        "id": 56,
+        "name": "Course 56",
+        "schedule": [
+            "Wednesday 9:00-10:00"
+        ]
+    },
+    {
+        "id": 57,
+        "name": "Course 57",
+        "schedule": [
+            "Wednesday 2:00-3:00",
+            "Thursday 10:00-11:00",
+            "Friday 10:00-11:00"
+        ]
+    },
+    {
+        "id": 58,
+        "name": "Course 58",
+        "schedule": [
+            "Monday 1:00-2:00",
+            "Tuesday 3:00-4:00",
+            "Wednesday 3:00-4:00",
+            "Thursday 10:00-11:00"
+        ]
+    },
+    {
+        "id": 59,
+        "name": "Course 59",
+        "schedule": [
+            "Monday 3:00-4:00",
+            "Tuesday 11:00-12:00",
+            "Friday 11:00-12:00"
+        ]
+    },
+    {
+        "id": 60,
+        "name": "Course 60",
+        "schedule": [
+            "Monday 9:00-10:00",
+            "Wednesday 3:00-4:00",
+            "Friday 2:00-3:00"
+        ]
+    },
+    {
+        "id": 61,
+        "name": "Course 61",
+        "schedule": [
+            "Tuesday 10:00-11:00",
+            "Wednesday 10:00-11:00"
+        ]
+    },
+    {
+        "id": 62,
+        "name": "Course 62",
+        "schedule": [
+            "Monday 3:00-4:00",
+            "Tuesday 1:00-2:00",
+            "Friday 11:00-12:00"
+        ]
+    },
+    {
+        "id": 63,
+        "name": "Course 63",
+        "schedule": [
+            "Monday 9:00-10:00",
+            "Thursday 9:00-10:00"
+        ]
+    },
+    {
+        "id": 64,
+        "name": "Course 64",
+        "schedule": [
+            "Wednesday 10:00-11:00",
+            "Friday 10:00-11:00"
+        ]
+    },
+    {
+        "id": 65,
+        "name": "Course 65",
+        "schedule": [
+            "Tuesday 1:00-2:00",
+            "Thursday 2:00-3:00",
+            "Friday 11:00-12:00"
+        ]
+    },
+    {
+        "id": 66,
+        "name": "Course 66",
+        "schedule": [
+            "Tuesday 2:00-3:00"
+        ]
+    },
+    {
+        "id": 67,
+        "name": "Course 67",
+        "schedule": [
+            "Tuesday 9:00-10:00"
+        ]
+    },
+    {
+        "id": 68,
+        "name": "Course 68",
+        "schedule": [
+            "Monday 11:00-12:00",
+            "Tuesday 1:00-2:00",
+            "Wednesday 10:00-11:00",
+            "Thursday 11:00-12:00",
+            "Friday 9:00-10:00"
+        ]
+    },
+    {
+        "id": 69,
+        "name": "Course 69",
+        "schedule": [
+            "Monday 2:00-3:00",
+            "Tuesday 10:00-11:00",
+            "Friday 3:00-4:00"
+        ]
+    },
+    {
+        "id": 70,
+        "name": "Course 70",
+        "schedule": [
+            "Monday 9:00-10:00",
+            "Tuesday 10:00-11:00"
+        ]
+    },
+    {
+        "id": 71,
+        "name": "Course 71",
+        "schedule": [
+            "Monday 11:00-12:00",
+            "Friday 11:00-12:00"
+        ]
+    },
+    {
+        "id": 72,
+        "name": "Course 72",
+        "schedule": [
+            "Wednesday 10:00-11:00",
+            "Thursday 11:00-12:00",
+            "Friday 2:00-3:00"
+        ]
+    },
+    {
+        "id": 73,
+        "name": "Course 73",
+        "schedule": [
+            "Monday 1:00-2:00",
+            "Wednesday 10:00-11:00",
+            "Thursday 9:00-10:00"
+        ]
+    },
+    {
+        "id": 74,
+        "name": "Course 74",
+        "schedule": []
+    },
+    {
+        "id": 75,
+        "name": "Course 75",
+        "schedule": [
+            "Monday 11:00-12:00",
+            "Thursday 10:00-11:00"
+        ]
+    },
+    {
+        "id": 76,
+        "name": "Course 76",
+        "schedule": [
+            "Monday 3:00-4:00",
+            "Thursday 9:00-10:00",
+            "Friday 1:00-2:00"
+        ]
+    },
+    {
+        "id": 77,
+        "name": "Course 77",
+        "schedule": [
+            "Tuesday 1:00-2:00",
+            "Wednesday 1:00-2:00",
+            "Friday 11:00-12:00"
+        ]
+    },
+    {
+        "id": 78,
+        "name": "Course 78",
+        "schedule": []
+    },
+    {
+        "id": 79,
+        "name": "Course 79",
+        "schedule": [
+            "Monday 1:00-2:00",
+            "Wednesday 1:00-2:00",
+            "Thursday 9:00-10:00"
+        ]
+    },
+    {
+        "id": 80,
+        "name": "Course 80",
+        "schedule": [
+            "Tuesday 3:00-4:00",
+            "Wednesday 2:00-3:00",
+            "Thursday 10:00-11:00",
+            "Friday 2:00-3:00"
+        ]
+    },
+    {
+        "id": 81,
+        "name": "Course 81",
+        "schedule": [
+            "Tuesday 2:00-3:00",
+            "Wednesday 3:00-4:00"
+        ]
+    },
+    {
+        "id": 82,
+        "name": "Course 82",
+        "schedule": [
+            "Tuesday 10:00-11:00",
+            "Wednesday 10:00-11:00",
+            "Friday 9:00-10:00"
+        ]
+    },
+    {
+        "id": 83,
+        "name": "Course 83",
+        "schedule": [
+            "Monday 9:00-10:00",
+            "Thursday 11:00-12:00"
+        ]
+    },
+    {
+        "id": 84,
+        "name": "Course 84",
+        "schedule": [
+            "Monday 9:00-10:00",
+            "Friday 9:00-10:00"
+        ]
+    },
+    {
+        "id": 85,
+        "name": "Course 85",
+        "schedule": [
+            "Monday 10:00-11:00",
+            "Wednesday 10:00-11:00",
+            "Thursday 1:00-2:00",
+            "Friday 2:00-3:00"
+        ]
+    },
+    {
+        "id": 86,
+        "name": "Course 86",
+        "schedule": [
+            "Monday 11:00-12:00",
+            "Thursday 3:00-4:00",
+            "Friday 9:00-10:00"
+        ]
+    },
+    {
+        "id": 87,
+        "name": "Course 87",
+        "schedule": [
+            "Monday 10:00-11:00",
+            "Tuesday 11:00-12:00",
+            "Friday 11:00-12:00"
+        ]
+    },
+    {
+        "id": 88,
+        "name": "Course 88",
+        "schedule": [
+            "Friday 2:00-3:00"
+        ]
+    },
+    {
+        "id": 89,
+        "name": "Course 89",
+        "schedule": [
+            "Monday 3:00-4:00",
+            "Tuesday 9:00-10:00",
+            "Thursday 9:00-10:00",
+            "Friday 10:00-11:00"
+        ]
+    },
+    {
+        "id": 90,
+        "name": "Course 90",
+        "schedule": [
+            "Monday 11:00-12:00",
+            "Tuesday 2:00-3:00",
+            "Friday 1:00-2:00"
+        ]
+    },
+    {
+        "id": 91,
+        "name": "Course 91",
+        "schedule": [
+            "Wednesday 9:00-10:00"
+        ]
+    },
+    {
+        "id": 92,
+        "name": "Course 92",
+        "schedule": [
+            "Monday 10:00-11:00",
+            "Tuesday 9:00-10:00",
+            "Wednesday 3:00-4:00",
+            "Thursday 1:00-2:00",
+            "Friday 1:00-2:00"
+        ]
+    },
+    {
+        "id": 93,
+        "name": "Course 93",
+        "schedule": [
+            "Monday 9:00-10:00",
+            "Thursday 2:00-3:00"
+        ]
+    },
+    {
+        "id": 94,
+        "name": "Course 94",
+        "schedule": [
+            "Tuesday 2:00-3:00",
+            "Wednesday 3:00-4:00"
+        ]
+    },
+    {
+        "id": 95,
+        "name": "Course 95",
+        "schedule": [
+            "Monday 11:00-12:00",
+            "Friday 1:00-2:00"
+        ]
+    },
+    {
+        "id": 96,
+        "name": "Course 96",
+        "schedule": [
+            "Tuesday 1:00-2:00",
+            "Friday 3:00-4:00"
+        ]
+    },
+    {
+        "id": 97,
+        "name": "Course 97",
+        "schedule": [
+            "Tuesday 2:00-3:00"
+        ]
+    },
+    {
+        "id": 98,
+        "name": "Course 98",
+        "schedule": [
+            "Wednesday 9:00-10:00",
+            "Thursday 10:00-11:00"
+        ]
+    },
+    {
+        "id": 99,
+        "name": "Course 99",
+        "schedule": [
+            "Monday 10:00-11:00",
+            "Wednesday 1:00-2:00",
+            "Friday 9:00-10:00"
+        ]
+    },
+    {
+        "id": 100,
+        "name": "Course 100",
+        "schedule": [
+            "Monday 3:00-4:00",
+            "Tuesday 2:00-3:00",
+            "Wednesday 2:00-3:00",
+            "Thursday 2:00-3:00"
+        ]
+    }
+]

@@ -1,0 +1,13 @@
+{
+    "max_hours_in_class": 18,
+    "combinations": [
+        [
+            "Course 3",
+            "Course 5",
+            "Course 7",
+            "Course 8",
+            "Course 9",
+            "Course 10"
+        ]
+    ]
+}
