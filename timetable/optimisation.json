@@ -10,5 +10,9 @@
   "rule3": {
     "plaintext": "If a class stays in the same room for their next period, that is good.",
     "weight": 1
+  },
+  "rule4": {
+    "plaintext": "Try to spread each day's lessons evenly across all teachers, rather than relying on the same few.",
+    "weight": 1
   }
 }

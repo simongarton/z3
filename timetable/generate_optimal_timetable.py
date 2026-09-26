@@ -39,7 +39,7 @@ import time
 
 from z3 import Solver, sat, unsat
 
-from generate_timetable import build_constraints, extract_timetable, load_json, write_all_timetables
+from generate_timetable import build_constraints, extract_timetable, load_json, write_all_timetables, write_load_reports
 from optimisation_rules import RULES
 
 TIME_BUDGET_SECONDS_PER_DAY = 30
@@ -197,6 +197,7 @@ def main():
         json.dump(timetable, f, indent=4)
 
     write_all_timetables(folder, timetable, periods, days, classes, teachers, rooms, suffix="_optimal")
+    write_load_reports(folder, timetable, teachers, rooms, suffix="_optimal")
 
     print("Score breakdown:")
     for rule_id in rule_ids:
@@ -207,6 +208,7 @@ def main():
 
     print(f"Saved to {output_path}")
     print("Wrote per-class, per-teacher and per-room markdown + PNG timetables to classes_optimal/, teachers_optimal/ and rooms_optimal/")
+    print("Wrote teacher_load_optimal.json and room_load_optimal.json")
 
 
 if __name__ == "__main__":

@@ -139,9 +139,38 @@ def extract_timetable(model, ctx, rooms, days):
     return timetable
 
 
-def build_timetable(classes, teachers, rooms, periods, days, subject_rooms):
+def add_teacher_load_floor(s, ctx, days, min_load):
+    """Hard floor: every teacher must be booked for at least min_load lessons
+    across the whole week, so nobody ends up nearly idle. This is a global
+    (whole-week) constraint, so it only makes sense against a single solve
+    that sees every slot at once - it is not used by the day-by-day
+    optimizer, which never sees more than one day's slots at a time.
+
+    A *minimum* was picked deliberately over a *maximum*: this is meant to
+    stop a teacher like "only ever gets 7 lessons" happening, not to cap
+    the busy ones. It also turned out to matter for solve time - capping
+    every teacher's load (an upper bound) made Z3 time out even at a
+    trivially-true bound, while a floor like this solves in ~10s. A floor
+    only asks the solver to find enough slots for each teacher (existential,
+    cheap); a cap asks it to prove none exist beyond a point across an
+    already-huge, highly symmetric search space (expensive)."""
+
+    class_names = ctx["class_names"]
+    teacher_vars = ctx["teacher_vars"]
+
+    for teacher_idx in range(len(ctx["teacher_names"])):
+        total = Sum(
+            [If(teacher_vars[(c, day, period)] == teacher_idx, 1, 0) for day, period in all_slots(days) for c in class_names]
+        )
+        s.add(total >= min_load)
+
+
+def build_timetable(classes, teachers, rooms, periods, days, subject_rooms, min_teacher_load=None):
     s = Solver()
     ctx = build_constraints(s, classes, teachers, rooms, periods, days, subject_rooms)
+
+    if min_teacher_load is not None:
+        add_teacher_load_floor(s, ctx, days, min_teacher_load)
 
     if s.check() != sat:
         return None
@@ -158,6 +187,34 @@ def write_all_timetables(folder, timetable, periods, days, classes, teachers, ro
     write_entity_timetables(folder, timetable, periods, days, rooms, "room", color_maps, f"rooms{suffix}")
 
 
+def compute_load(timetable, entity_kind, entity_names):
+    """How many lessons each entity (teacher or room) is booked for across
+    the whole week, including 0 for any that are never used."""
+    load = {name: 0 for name in entity_names}
+    for day_periods in timetable.values():
+        for entries in day_periods.values():
+            for info in entries.values():
+                load[info[entity_kind]] += 1
+    return load
+
+
+def write_load_reports(folder, timetable, teachers, rooms, suffix=""):
+    teacher_load = compute_load(timetable, "teacher", list(teachers.keys()))
+    room_load = compute_load(timetable, "room", rooms)
+
+    with open(os.path.join(folder, f"teacher_load{suffix}.json"), "w") as f:
+        json.dump(teacher_load, f, indent=4)
+    with open(os.path.join(folder, f"room_load{suffix}.json"), "w") as f:
+        json.dump(room_load, f, indent=4)
+
+
+# the minimum number of lessons/week every teacher must be given, so a
+# narrowly-qualified teacher (like one who only teaches a rarely-picked
+# subject) doesn't end up nearly idle. Empirically, 15 solves in ~10s;
+# pushing this much higher (e.g. 20) made it too hard to solve at all.
+MIN_TEACHER_LOAD = 15
+
+
 def main():
     folder = os.path.dirname(os.path.abspath(__file__))
 
@@ -168,7 +225,9 @@ def main():
     days = load_json(folder, "days.json")
     subject_rooms = load_json(folder, "subjects.json")
 
-    timetable = build_timetable(classes, teachers, rooms, periods, days, subject_rooms)
+    total_slots = sum(len(p) for p in days.values())
+
+    timetable = build_timetable(classes, teachers, rooms, periods, days, subject_rooms, MIN_TEACHER_LOAD)
 
     if timetable is None:
         print("No valid timetable found.")
@@ -179,11 +238,13 @@ def main():
         json.dump(timetable, f, indent=4)
 
     write_all_timetables(folder, timetable, periods, days, classes, teachers, rooms)
+    write_load_reports(folder, timetable, teachers, rooms)
 
-    total_slots = sum(len(p) for p in days.values())
     print(f"Generated a valid weekly timetable for {len(classes)} classes across {total_slots} day/period slots.")
+    print(f"Every teacher guaranteed at least {MIN_TEACHER_LOAD} lessons/week.")
     print(f"Saved to {output_path}")
     print("Wrote per-class, per-teacher and per-room markdown + PNG timetables to classes/, teachers/ and rooms/")
+    print("Wrote teacher_load.json and room_load.json")
 
 
 if __name__ == "__main__":

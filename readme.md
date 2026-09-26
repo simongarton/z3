@@ -170,6 +170,12 @@ Discussing further with Claude, it suggests optimizing each day individually - f
 
 Let's add a constraint : only certain rooms support Science, and the three sciences. And another room is needed for Art.
 
+Ok, that improved it signficantly - faster, and better score.
+
+But then - foolish, in hindsight - we tried to better. I noted that most teachers had 38 lessons, but Professor Black had just 7. Yes, he is a Chemistry teacher, but even so, could we make this fairer ?
+
+Claude picked the wrong way to do it, I think - implementing a max load, which in turn meant there turned out to be no valid solutions. (I note that it's trying to get any solution first, before then trying to get a good one - which is a good approach.)
+
 ## presentations
 
 https://theory.stanford.edu/~nikolaj/nus.html#/sec-z3 gets into maths quickly.
@@ -177,6 +183,10 @@ https://theory.stanford.edu/~nikolaj/nus.html#/sec-z3 gets into maths quickly.
 ## specific example (not z3)
 
 https://medium.com/suboptimally-speaking/school-timetabling-with-constraint-programming-495f1126c28d
+
+https://developers.google.com/optimization/scheduling/employee_scheduling
+
+
 
 ## older stuff
 
