@@ -132,6 +132,8 @@ Created timetable/generate_teachers.py and ran it to produce timetable/teachers.
 Result: 15 teachers generated, all 12 subjects covered, saved to timetable/teachers.json.
 ```
 
+Took 1m 13s to write the first script, to return "a" timetable.
+
 ## presentations
 
 https://theory.stanford.edu/~nikolaj/nus.html#/sec-z3 gets into maths quickly.
