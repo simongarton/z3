@@ -11,6 +11,9 @@ import colorsys
 LIGHTNESS = 0.85
 SATURATION = 0.55
 
+ACCENT_LIGHTNESS = 0.5
+ACCENT_SATURATION = 0.75
+
 
 def pale_palette(values):
     ordered = sorted(values)
@@ -21,6 +24,17 @@ def pale_palette(values):
         r, g, b = colorsys.hls_to_rgb(hue, LIGHTNESS, SATURATION)
         palette[value] = (round(r * 255), round(g * 255), round(b * 255))
     return palette
+
+
+def accent_variant(color):
+    """A more saturated, less pale version of a pale_palette() colour, for
+    use in small areas (like an accent bar) where a pale tone wouldn't
+    stand out - while keeping the same hue, so it's still recognisable as
+    the same value."""
+    r, g, b = (c / 255 for c in color)
+    hue, _, _ = colorsys.rgb_to_hls(r, g, b)
+    r2, g2, b2 = colorsys.hls_to_rgb(hue, ACCENT_LIGHTNESS, ACCENT_SATURATION)
+    return (round(r2 * 255), round(g2 * 255), round(b2 * 255))
 
 
 def build_color_maps(class_names, teacher_names, rooms, subjects):

@@ -174,6 +174,10 @@ Let's add a constraint : only certain rooms support Science, and the three scien
 
 https://theory.stanford.edu/~nikolaj/nus.html#/sec-z3 gets into maths quickly.
 
+## specific example (not z3)
+
+https://medium.com/suboptimally-speaking/school-timetabling-with-constraint-programming-495f1126c28d
+
 ## older stuff
 
 https://ericpony.github.io/z3py-tutorial/guide-examples.htm
