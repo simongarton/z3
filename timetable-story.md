@@ -160,6 +160,8 @@ A **minimum** floor - "every teacher gets at least 15 lessons" - solved in about
 
 The final approach split the difference: a hard minimum-load floor in the plain "just find a valid timetable" solver (fast, exact, guaranteed), plus a new soft rule in the optimiser rewarding each day's lessons being spread evenly across teachers - a best-effort nudge rather than a guarantee, since the optimiser only ever looks at one day at a time.
 
+> **Update:** a later experiment porting this same model to Google OR-Tools' CP-SAT settled the question properly. The maximum cap wasn't just hard for Z3 - it was genuinely infeasible, and CP-SAT proved it in well under a second. Minimising each teacher's load individually revealed why: 8 of the 12 teachers are mathematically forced to teach every single one of the 38 periods, because a specific block of classes can only ever be covered by exactly those 8 people, with no qualification slack to spare. "Extremely expensive to prove" and "impossible" look identical from the outside when a solver times out - it took a second solver to tell them apart.
+
 ## Where that leaves things
 
 The finished system, walking backwards from that first `solve(x + 2 == 4)`:

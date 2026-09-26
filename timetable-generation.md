@@ -133,6 +133,8 @@ Adding a load report (how many lessons each teacher actually gets across the wee
 
 The fix that seemed obvious - cap everyone's maximum load - turned out to be far harder for Z3 to satisfy than expected; even a cap that was already guaranteed to be true by construction made it time out. A **minimum** floor instead ("every teacher gets at least 15 lessons a week") solved in about ten seconds, because it only asks the solver to find enough slots for someone, rather than prove none exist beyond a limit. Professor Black went from 7 lessons to 15. A softer version of the same idea - "spread each day's lessons evenly, if you can" - was added as a fourth scoring rule for the optimiser, nudging its result from 408 to 344 as it traded a little room/teacher tidiness for fairness (Professor Black's load there rose from 7 to 14).
 
+> **Update:** trying the same problem in Google OR-Tools' CP-SAT (see the companion post on that) settled this properly. The max-load cap wasn't merely hard for Z3 - it was *impossible*, and CP-SAT proved that in well under a second. Using `Minimize()` on each teacher's load individually showed that 8 of the 12 teachers (everyone except the four who cover S3/S4's extra subjects) are mathematically forced to teach every single one of the 38 periods: classes P1-P6, S1 and S2 collectively can only ever be covered by exactly those 8 people, with zero slack in the qualifications to spare. A cap below 38 was never on the table, in either solver - Z3 just couldn't tell us that quickly, while CP-SAT could.
+
 ## Where that leaves it
 
 What started as "can 10 classes be given a valid weekly schedule" ended up as a small system with:
