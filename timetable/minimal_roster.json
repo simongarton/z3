@@ -1,0 +1,130 @@
+{
+    "subjects_needed": [
+        "Art",
+        "Biology",
+        "Business Studies",
+        "Chemistry",
+        "Economics",
+        "English",
+        "Geography",
+        "Geology",
+        "History",
+        "Maths",
+        "Physics",
+        "Science"
+    ],
+    "minimal_size": 6,
+    "rosters": [
+        {
+            "Professor Gold": [
+                "Chemistry",
+                "Maths"
+            ],
+            "Professor Navy": [
+                "Biology",
+                "Economics",
+                "Physics"
+            ],
+            "Professor Magenta": [
+                "Art",
+                "Biology",
+                "Science"
+            ],
+            "Professor Indigo": [
+                "Business Studies",
+                "Geography",
+                "History"
+            ],
+            "Professor Olive": [
+                "English",
+                "Business Studies",
+                "Chemistry"
+            ],
+            "Professor Pink": [
+                "Geology"
+            ]
+        },
+        {
+            "Professor Purple": [
+                "English"
+            ],
+            "Professor Gold": [
+                "Chemistry",
+                "Maths"
+            ],
+            "Professor Navy": [
+                "Biology",
+                "Economics",
+                "Physics"
+            ],
+            "Professor Magenta": [
+                "Art",
+                "Biology",
+                "Science"
+            ],
+            "Professor Indigo": [
+                "Business Studies",
+                "Geography",
+                "History"
+            ],
+            "Professor Pink": [
+                "Geology"
+            ]
+        },
+        {
+            "Professor Navy": [
+                "Biology",
+                "Economics",
+                "Physics"
+            ],
+            "Professor Magenta": [
+                "Art",
+                "Biology",
+                "Science"
+            ],
+            "Professor Indigo": [
+                "Business Studies",
+                "Geography",
+                "History"
+            ],
+            "Professor Olive": [
+                "English",
+                "Business Studies",
+                "Chemistry"
+            ],
+            "Professor Pink": [
+                "Geology"
+            ],
+            "Professor White": [
+                "Maths"
+            ]
+        },
+        {
+            "Professor Gold": [
+                "Chemistry",
+                "Maths"
+            ],
+            "Professor Navy": [
+                "Biology",
+                "Economics",
+                "Physics"
+            ],
+            "Professor Magenta": [
+                "Art",
+                "Biology",
+                "Science"
+            ],
+            "Professor Indigo": [
+                "Business Studies",
+                "Geography",
+                "History"
+            ],
+            "Professor Grey": [
+                "English"
+            ],
+            "Professor Pink": [
+                "Geology"
+            ]
+        }
+    ]
+}
