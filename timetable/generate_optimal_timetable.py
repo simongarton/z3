@@ -17,17 +17,21 @@
 # times that rule's pattern occurs in the timetable. Weights (and therefore
 # the score) can be negative.
 #
-# With 15 largely-interchangeable teachers and rooms, the search space is
-# hugely symmetric, so *proving* an assignment optimal can take far longer
-# than finding a very good one. Z3's Optimize handles this internally with a
-# timeout, but a model it hands back after timing out can leave some
-# variables unassigned - and "completing" those independently can silently
-# break joint constraints like Distinct (two classes ending up with the same
-# teacher). So instead this does its own bounded search with a plain
-# Solver: solve, then require a strictly better score than that, and repeat.
-# Every accepted answer comes from an actual `sat` result, so it's always a
-# fully valid timetable - we simply stop improving once time runs out, or
-# once a request for something better comes back `unsat` (a proven optimum).
+# Every current rule (optimisation_rules.py) only ever compares consecutive
+# periods within the SAME day - none of them look across days. That means
+# the whole week is really 5 independent optimization problems, not one big
+# one, and solving it as 5 small problems instead of 1 huge one drastically
+# shrinks the search space Z3 has to explore per solve, e.g. proving a day's
+# schedule optimal outright rather than timing out on the whole week.
+#
+# With teachers/rooms often interchangeable within a slot, that search space
+# is still symmetric, so *proving* an assignment optimal can take longer
+# than finding a very good one even per day. So each day's search still
+# uses its own bounded search with a plain Solver: solve, then require a
+# strictly better score than that for this day, and repeat. Every accepted
+# answer comes from an actual `sat` result, so it's always a fully valid
+# timetable - we simply stop improving once time runs out, or once a
+# request for something better comes back `unsat` (a proven optimum).
 
 import json
 import os
@@ -38,7 +42,7 @@ from z3 import Solver, sat, unsat
 from generate_timetable import build_constraints, extract_timetable, load_json, write_all_timetables
 from optimisation_rules import RULES
 
-TIME_BUDGET_SECONDS = 30
+TIME_BUDGET_SECONDS_PER_DAY = 30
 
 
 def load_rule_config(folder):
@@ -47,14 +51,10 @@ def load_rule_config(folder):
     return catalogue, run_config
 
 
-def build_score(ctx, catalogue, run_config):
-    """Return (total_objective, per_rule_terms) where per_rule_terms maps
-    rule_id -> (plaintext, weight, raw_term) for every rule actually applied
-    this run. total_objective is None if no rules were applied."""
-
-    per_rule_terms = {}
-    total = None
-
+def active_rules(catalogue, run_config):
+    """Rule ids that are both configured for this run and actually
+    implemented, in run_config's order."""
+    active = []
     for rule_id, weight in run_config.items():
         if rule_id not in catalogue:
             print(f"Warning: '{rule_id}' is in optimisations.json but not in optimisation.json - skipping.")
@@ -62,11 +62,23 @@ def build_score(ctx, catalogue, run_config):
         if rule_id not in RULES:
             print(f"Warning: '{rule_id}' has no implementation in optimisation_rules.py yet - skipping.")
             continue
+        active.append(rule_id)
+    return active
 
+
+def build_score(ctx, catalogue, run_config, rule_ids):
+    """Return (total_objective, per_rule_terms) where per_rule_terms maps
+    rule_id -> raw_term for every rule in rule_ids. total_objective is None
+    if rule_ids is empty."""
+
+    per_rule_terms = {}
+    total = None
+
+    for rule_id in rule_ids:
         raw_term = RULES[rule_id](ctx)
-        per_rule_terms[rule_id] = (catalogue[rule_id]["plaintext"], weight, raw_term)
+        per_rule_terms[rule_id] = raw_term
 
-        weighted_term = weight * raw_term
+        weighted_term = run_config[rule_id] * raw_term
         total = weighted_term if total is None else total + weighted_term
 
     return total, per_rule_terms
@@ -106,6 +118,34 @@ def search_for_best(s, total, time_budget_seconds):
     return best_model, best_score, False
 
 
+def solve_day(classes, teachers, rooms, periods, day, day_periods, subject_rooms, catalogue, run_config, rule_ids, time_budget_seconds):
+    sub_days = {day: day_periods}
+
+    s = Solver()
+    ctx = build_constraints(s, classes, teachers, rooms, periods, sub_days, subject_rooms)
+    ctx["days"] = sub_days
+
+    total, per_rule_terms = build_score(ctx, catalogue, run_config, rule_ids)
+
+    started = time.time()
+    model, score, proven_optimal = search_for_best(s, total, time_budget_seconds)
+    elapsed = time.time() - started
+
+    if model is None:
+        return None
+
+    day_timetable = extract_timetable(model, ctx, rooms, sub_days)[day]
+    counts = {rule_id: model.eval(term, model_completion=True).as_long() for rule_id, term in per_rule_terms.items()}
+
+    return {
+        "timetable": day_timetable,
+        "score": score,
+        "proven_optimal": proven_optimal,
+        "elapsed": elapsed,
+        "counts": counts,
+    }
+
+
 def main():
     folder = os.path.dirname(os.path.abspath(__file__))
 
@@ -114,33 +154,43 @@ def main():
     rooms = load_json(folder, "rooms.json")
     periods = load_json(folder, "periods.json")
     days = load_json(folder, "days.json")
+    subject_rooms = load_json(folder, "subjects.json")
 
     catalogue, run_config = load_rule_config(folder)
+    rule_ids = active_rules(catalogue, run_config)
 
-    s = Solver()
-    ctx = build_constraints(s, classes, teachers, rooms, periods, days)
-    ctx["days"] = days
+    timetable = {}
+    total_score = 0
+    total_elapsed = 0.0
+    all_proven = True
+    aggregate_counts = {rule_id: 0 for rule_id in rule_ids}
 
-    total, per_rule_terms = build_score(ctx, catalogue, run_config)
+    for day, day_periods in days.items():
+        result = solve_day(classes, teachers, rooms, periods, day, day_periods, subject_rooms, catalogue, run_config, rule_ids, TIME_BUDGET_SECONDS_PER_DAY)
 
-    search_started = time.time()
-    model, score, proven_optimal = search_for_best(s, total, TIME_BUDGET_SECONDS)
-    elapsed = time.time() - search_started
+        if result is None:
+            print(f"No valid timetable found for {day}.")
+            return
 
-    if model is None:
-        print(f"No valid timetable found (after {elapsed:.1f}s).")
-        return
+        timetable[day] = result["timetable"]
+        total_score += result["score"]
+        total_elapsed += result["elapsed"]
+        all_proven = all_proven and result["proven_optimal"]
 
-    if proven_optimal:
-        print(f"PROVEN OPTIMAL (score {score}) in {elapsed:.1f}s - Z3 confirmed no better score is possible.")
+        for rule_id, count in result["counts"].items():
+            aggregate_counts[rule_id] += count
+
+        status = "PROVEN OPTIMAL" if result["proven_optimal"] else "not proven optimal"
+        print(f"  {day}: {status}, score {result['score']}, took {result['elapsed']:.1f}s")
+
+    print()
+    if all_proven:
+        print(f"PROVEN OPTIMAL overall (score {total_score}) - every day solved to a confirmed optimum, total search time {total_elapsed:.1f}s.")
     else:
         print(
-            f"NOT proven optimal - this is just the best confirmed-valid timetable found "
-            f"within the {TIME_BUDGET_SECONDS}s search budget (took {elapsed:.1f}s): score {score}. "
-            f"A better one may exist; increase TIME_BUDGET_SECONDS to search further."
+            f"NOT proven optimal overall - at least one day hit its {TIME_BUDGET_SECONDS_PER_DAY}s budget. "
+            f"Best confirmed-valid combined score: {total_score} (total search time {total_elapsed:.1f}s)."
         )
-
-    timetable = extract_timetable(model, ctx, rooms, days)
 
     output_path = os.path.join(folder, "timetable_optimal.json")
     with open(output_path, "w") as f:
@@ -149,13 +199,11 @@ def main():
     write_all_timetables(folder, timetable, periods, days, classes, teachers, rooms, suffix="_optimal")
 
     print("Score breakdown:")
-    grand_total = 0
-    for rule_id, (plaintext, weight, raw_term) in per_rule_terms.items():
-        count = model.eval(raw_term, model_completion=True).as_long()
-        contribution = weight * count
-        grand_total += contribution
-        print(f"  {rule_id} ({plaintext}): {count} x {weight} = {contribution}")
-    print(f"Total score: {grand_total}")
+    for rule_id in rule_ids:
+        weight = run_config[rule_id]
+        count = aggregate_counts[rule_id]
+        print(f"  {rule_id} ({catalogue[rule_id]['plaintext']}): {count} x {weight} = {weight * count}")
+    print(f"Total score: {total_score}")
 
     print(f"Saved to {output_path}")
     print("Wrote per-class, per-teacher and per-room markdown + PNG timetables to classes_optimal/, teachers_optimal/ and rooms_optimal/")

@@ -2,11 +2,13 @@
 #
 # Reads classes.json (subjects each class can be taught), teachers.json
 # (subjects each teacher can teach), rooms.json, periods.json (the time for
-# each period number) and days.json (which periods run on which day - e.g.
-# Wednesday is a half day) then uses Z3 to build ONE valid timetable for the
-# whole week: for every day/period slot, every class is taught one of its
-# subjects, by a teacher qualified for that subject, in a room - with no
-# teacher or room double-booked in the same day/period slot.
+# each period number), days.json (which periods run on which day - e.g.
+# Wednesday is a half day) and subjects.json (which rooms support each
+# subject - an empty list means no restriction) then uses Z3 to build ONE
+# valid timetable for the whole week: for every day/period slot, every class
+# is taught one of its subjects, by a teacher qualified for that subject, in
+# a room that supports it - with no teacher or room double-booked in the
+# same day/period slot.
 #
 # This is a "does a working timetable exist" solve, not an optimal one:
 # there's no attempt to vary subjects across slots, balance teacher load,
@@ -31,10 +33,11 @@ def all_slots(days):
     return [(day, str(period)) for day, day_periods in days.items() for period in day_periods]
 
 
-def build_constraints(s, classes, teachers, rooms, periods, days):
-    """Add the hard rules (valid subject/teacher pairing, no double-booking) to
-    solver/optimizer `s`, and return the variables and lookups needed to read
-    a model back out, or to build further (soft) constraints on top."""
+def build_constraints(s, classes, teachers, rooms, periods, days, subject_rooms):
+    """Add the hard rules (valid subject/teacher pairing, room support, no
+    double-booking) to solver/optimizer `s`, and return the variables and
+    lookups needed to read a model back out, or to build further (soft)
+    constraints on top."""
 
     class_names = list(classes.keys())
     teacher_names = list(teachers.keys())
@@ -42,6 +45,7 @@ def build_constraints(s, classes, teachers, rooms, periods, days):
 
     subject_index = {s: i for i, s in enumerate(subjects)}
     teacher_index = {t: i for i, t in enumerate(teacher_names)}
+    room_index = {r: i for i, r in enumerate(rooms)}
 
     slots = all_slots(days)
 
@@ -57,6 +61,15 @@ def build_constraints(s, classes, teachers, rooms, periods, days):
                 if subject in teacher_subjects:
                     pairs.append((s_idx, teacher_index[teacher_name]))
         valid_pairs[class_name] = pairs
+
+    # for each subject, the room indices it's restricted to - an empty (or
+    # missing) list in subjects.json means no restriction recorded yet, so
+    # any room is fine
+    allowed_rooms_by_subject = {}
+    for subject in subjects:
+        room_names = subject_rooms.get(subject) or []
+        if room_names:
+            allowed_rooms_by_subject[subject_index[subject]] = [room_index[r] for r in room_names]
 
     subject_vars = {}
     teacher_vars = {}
@@ -81,6 +94,9 @@ def build_constraints(s, classes, teachers, rooms, periods, days):
                 )
             )
             s.add(room_var >= 0, room_var < len(rooms))
+
+            for s_idx, room_indices in allowed_rooms_by_subject.items():
+                s.add(Implies(subject_var == s_idx, Or([room_var == r_idx for r_idx in room_indices])))
 
         # no teacher or room can be double-booked within the same slot
         s.add(Distinct([teacher_vars[(c, day, period)] for c in class_names]))
@@ -123,9 +139,9 @@ def extract_timetable(model, ctx, rooms, days):
     return timetable
 
 
-def build_timetable(classes, teachers, rooms, periods, days):
+def build_timetable(classes, teachers, rooms, periods, days, subject_rooms):
     s = Solver()
-    ctx = build_constraints(s, classes, teachers, rooms, periods, days)
+    ctx = build_constraints(s, classes, teachers, rooms, periods, days, subject_rooms)
 
     if s.check() != sat:
         return None
@@ -150,8 +166,9 @@ def main():
     rooms = load_json(folder, "rooms.json")
     periods = load_json(folder, "periods.json")
     days = load_json(folder, "days.json")
+    subject_rooms = load_json(folder, "subjects.json")
 
-    timetable = build_timetable(classes, teachers, rooms, periods, days)
+    timetable = build_timetable(classes, teachers, rooms, periods, days, subject_rooms)
 
     if timetable is None:
         print("No valid timetable found.")

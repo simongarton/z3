@@ -147,6 +147,29 @@ Found the real problem: a timed-out Optimize model isn't safe to use — variabl
 I'll switch to iterative "solve, then strictly beat this score, repeat" using a plain Solver under a time budget — every accepted answer is a genuine sat result, so it's always valid; we just stop improving once we run out of time or provably hit the optimum.
 ```
 
+Now we're getting solutions in 30 seconds. I've tried a 5 minute run, and it didn't get better.
+
+It generates lots of output: both markdown ...
+
+| Period | Time | Monday | Tuesday | Wednesday | Thursday | Friday |
+|--------|------|------|------|------|------|------|
+| 1 | 08:00-08:45 | S3<br>Chemistry<br>Room 204 | *Free* | S3<br>Chemistry<br>Room 302 | *Free* | *Free* |
+| 2 | 08:45-09:30 | *Free* | *Free* | *Free* | *Free* | *Free* |
+| 3 | 09:30-10:15 | S3<br>Chemistry<br>Room 203 | *Free* | *Free* | S3<br>Chemistry<br>Room 301 | *Free* |
+| 4 | 10:15-11:00 | *Free* | *Free* | *Free* | *Free* | *Free* |
+| 5 | 11:00-11:45 | *Free* | *Free* | S3<br>Chemistry<br>Room 204 | *Free* | S3<br>Chemistry<br>Room 301 |
+| 6 | 11:45-12:30 | S3<br>Chemistry<br>Room 301 | *Free* | *Free* | *Free* | *Free* |
+| 7 | 12:30-13:15 | S3<br>Chemistry<br>Room 204 | S3<br>Chemistry<br>Room 301 | - | *Free* | S3<br>Chemistry<br>Room 301 |
+| 8 | 13:15-14:00 | *Free* | *Free* | - | *Free* | *Free* |
+
+... wow, he has a lot of free time ... and PNG files ...
+
+![example](timetable/classes_optimal/P1.png)
+
+Discussing further with Claude, it suggests optimizing each day individually - fair enough, give it a whirl. And now it will return a provably optimum solution (for those constraints) ... only it didn't, and Claude is very apologetic.
+
+Let's add a constraint : only certain rooms support Science, and the three sciences. And another room is needed for Art.
+
 ## presentations
 
 https://theory.stanford.edu/~nikolaj/nus.html#/sec-z3 gets into maths quickly.

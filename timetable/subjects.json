@@ -1,0 +1,14 @@
+{
+    "Art": ["Room 102", "Room 103"],
+    "Biology": ["Room 301", "Room 201", "Room 203", "Room 302", "Room 303"],
+    "Business Studies": [],
+    "Chemistry": ["Room 301", "Room 302", "Room 303"],
+    "Economics": [],
+    "English": [],
+    "Geography": [],
+    "Geology": [],
+    "History": [],
+    "Maths": [],
+    "Physics": ["Room 301", "Room 302", "Room 303"],
+    "Science": ["Room 301", "Room 302", "Room 303"]
+}

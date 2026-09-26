@@ -2,143 +2,143 @@
     "Monday": {
         "1": {
             "P1": {
-                "subject": "Maths",
-                "teacher": "Professor Gold",
-                "room": "Room 102"
+                "subject": "English",
+                "teacher": "Professor Grey",
+                "room": "Room 301"
             },
             "P2": {
                 "subject": "English",
                 "teacher": "Professor Purple",
-                "room": "Room 101"
+                "room": "Room 102"
             },
             "P3": {
-                "subject": "English",
-                "teacher": "Professor Olive",
-                "room": "Room 103"
+                "subject": "Maths",
+                "teacher": "Professor White",
+                "room": "Room 302"
             },
             "P4": {
-                "subject": "English",
-                "teacher": "Professor Grey",
-                "room": "Room 104"
-            },
-            "P5": {
                 "subject": "Science",
                 "teacher": "Professor Magenta",
+                "room": "Room 303"
+            },
+            "P5": {
+                "subject": "Maths",
+                "teacher": "Professor Gold",
                 "room": "Room 201"
             },
             "P6": {
-                "subject": "Maths",
-                "teacher": "Professor White",
-                "room": "Room 202"
+                "subject": "History",
+                "teacher": "Professor Indigo",
+                "room": "Room 103"
             },
             "S1": {
                 "subject": "History",
                 "teacher": "Professor Green",
-                "room": "Room 203"
+                "room": "Room 202"
             },
             "S2": {
-                "subject": "Geography",
-                "teacher": "Professor Indigo",
-                "room": "Room 301"
+                "subject": "English",
+                "teacher": "Professor Olive",
+                "room": "Room 101"
             },
             "S3": {
-                "subject": "Chemistry",
-                "teacher": "Professor Black",
-                "room": "Room 204"
+                "subject": "Biology",
+                "teacher": "Professor Navy",
+                "room": "Room 203"
             },
             "S4": {
                 "subject": "Economics",
-                "teacher": "Professor Navy",
-                "room": "Room 302"
+                "teacher": "Professor Maroon",
+                "room": "Room 204"
             }
         },
         "2": {
             "P1": {
-                "subject": "Science",
-                "teacher": "Professor Magenta",
-                "room": "Room 302"
+                "subject": "English",
+                "teacher": "Professor Purple",
+                "room": "Room 102"
             },
             "P2": {
                 "subject": "English",
-                "teacher": "Professor Purple",
-                "room": "Room 101"
+                "teacher": "Professor Grey",
+                "room": "Room 303"
             },
             "P3": {
                 "subject": "Maths",
                 "teacher": "Professor Gold",
-                "room": "Room 202"
+                "room": "Room 201"
             },
             "P4": {
-                "subject": "Maths",
-                "teacher": "Professor White",
-                "room": "Room 102"
+                "subject": "Science",
+                "teacher": "Professor Magenta",
+                "room": "Room 302"
             },
             "P5": {
-                "subject": "English",
-                "teacher": "Professor Olive",
+                "subject": "Maths",
+                "teacher": "Professor White",
                 "room": "Room 104"
             },
             "P6": {
-                "subject": "History",
-                "teacher": "Professor Green",
-                "room": "Room 103"
+                "subject": "English",
+                "teacher": "Professor Olive",
+                "room": "Room 101"
             },
             "S1": {
-                "subject": "English",
-                "teacher": "Professor Grey",
-                "room": "Room 201"
+                "subject": "History",
+                "teacher": "Professor Indigo",
+                "room": "Room 103"
             },
             "S2": {
                 "subject": "History",
-                "teacher": "Professor Indigo",
-                "room": "Room 203"
+                "teacher": "Professor Green",
+                "room": "Room 202"
             },
             "S3": {
-                "subject": "Chemistry",
-                "teacher": "Professor Maroon",
-                "room": "Room 204"
+                "subject": "Biology",
+                "teacher": "Professor Navy",
+                "room": "Room 203"
             },
             "S4": {
                 "subject": "Geology",
                 "teacher": "Professor Pink",
-                "room": "Room 301"
+                "room": "Room 204"
             }
         },
         "3": {
             "P1": {
-                "subject": "English",
-                "teacher": "Professor Grey",
+                "subject": "Maths",
+                "teacher": "Professor Gold",
                 "room": "Room 302"
             },
             "P2": {
-                "subject": "Science",
-                "teacher": "Professor Magenta",
+                "subject": "English",
+                "teacher": "Professor Purple",
                 "room": "Room 204"
             },
             "P3": {
-                "subject": "English",
-                "teacher": "Professor Olive",
-                "room": "Room 101"
+                "subject": "Science",
+                "teacher": "Professor Magenta",
+                "room": "Room 301"
             },
             "P4": {
                 "subject": "Maths",
-                "teacher": "Professor Gold",
-                "room": "Room 102"
+                "teacher": "Professor White",
+                "room": "Room 303"
             },
             "P5": {
                 "subject": "English",
-                "teacher": "Professor Purple",
-                "room": "Room 103"
+                "teacher": "Professor Olive",
+                "room": "Room 102"
             },
             "P6": {
-                "subject": "Maths",
-                "teacher": "Professor White",
+                "subject": "English",
+                "teacher": "Professor Grey",
                 "room": "Room 104"
             },
             "S1": {
                 "subject": "History",
                 "teacher": "Professor Green",
-                "room": "Room 201"
+                "room": "Room 103"
             },
             "S2": {
                 "subject": "Geography",
@@ -146,93 +146,93 @@
                 "room": "Room 202"
             },
             "S3": {
-                "subject": "Chemistry",
-                "teacher": "Professor Black",
-                "room": "Room 203"
+                "subject": "Biology",
+                "teacher": "Professor Navy",
+                "room": "Room 201"
             },
             "S4": {
                 "subject": "Economics",
                 "teacher": "Professor Maroon",
-                "room": "Room 301"
+                "room": "Room 203"
             }
         },
         "4": {
             "P1": {
-                "subject": "English",
-                "teacher": "Professor Purple",
-                "room": "Room 302"
-            },
-            "P2": {
                 "subject": "Science",
                 "teacher": "Professor Magenta",
-                "room": "Room 204"
+                "room": "Room 303"
+            },
+            "P2": {
+                "subject": "English",
+                "teacher": "Professor Purple",
+                "room": "Room 301"
             },
             "P3": {
-                "subject": "English",
-                "teacher": "Professor Olive",
-                "room": "Room 104"
+                "subject": "Maths",
+                "teacher": "Professor White",
+                "room": "Room 204"
             },
             "P4": {
                 "subject": "English",
                 "teacher": "Professor Grey",
-                "room": "Room 202"
+                "room": "Room 104"
             },
             "P5": {
-                "subject": "Maths",
-                "teacher": "Professor White",
-                "room": "Room 301"
-            },
-            "P6": {
-                "subject": "Maths",
-                "teacher": "Professor Gold",
-                "room": "Room 103"
-            },
-            "S1": {
                 "subject": "Geography",
                 "teacher": "Professor Indigo",
-                "room": "Room 101"
+                "room": "Room 102"
             },
-            "S2": {
-                "subject": "History",
-                "teacher": "Professor Green",
+            "P6": {
+                "subject": "English",
+                "teacher": "Professor Olive",
                 "room": "Room 203"
             },
+            "S1": {
+                "subject": "History",
+                "teacher": "Professor Green",
+                "room": "Room 103"
+            },
+            "S2": {
+                "subject": "Maths",
+                "teacher": "Professor Gold",
+                "room": "Room 101"
+            },
             "S3": {
-                "subject": "Chemistry",
-                "teacher": "Professor Maroon",
+                "subject": "Biology",
+                "teacher": "Professor Navy",
                 "room": "Room 201"
             },
             "S4": {
-                "subject": "Economics",
-                "teacher": "Professor Navy",
-                "room": "Room 102"
+                "subject": "Geology",
+                "teacher": "Professor Pink",
+                "room": "Room 202"
             }
         },
         "5": {
             "P1": {
                 "subject": "English",
-                "teacher": "Professor Olive",
-                "room": "Room 102"
+                "teacher": "Professor Grey",
+                "room": "Room 104"
             },
             "P2": {
                 "subject": "English",
-                "teacher": "Professor Grey",
-                "room": "Room 101"
+                "teacher": "Professor Purple",
+                "room": "Room 301"
             },
             "P3": {
-                "subject": "Science",
-                "teacher": "Professor Magenta",
-                "room": "Room 104"
+                "subject": "English",
+                "teacher": "Professor Olive",
+                "room": "Room 302"
             },
             "P4": {
                 "subject": "Maths",
                 "teacher": "Professor Gold",
-                "room": "Room 103"
+                "room": "Room 204"
             },
             "P5": {
-                "subject": "Maths",
-                "teacher": "Professor White",
-                "room": "Room 201"
+                "subject": "Science",
+                "teacher": "Professor Magenta",
+                "room": "Room 303"
             },
             "P6": {
                 "subject": "History",
@@ -240,93 +240,145 @@
                 "room": "Room 203"
             },
             "S1": {
-                "subject": "English",
-                "teacher": "Professor Purple",
-                "room": "Room 202"
-            },
-            "S2": {
                 "subject": "History",
                 "teacher": "Professor Green",
-                "room": "Room 301"
+                "room": "Room 101"
+            },
+            "S2": {
+                "subject": "Maths",
+                "teacher": "Professor White",
+                "room": "Room 102"
             },
             "S3": {
-                "subject": "Chemistry",
-                "teacher": "Professor Maroon",
-                "room": "Room 204"
+                "subject": "Biology",
+                "teacher": "Professor Navy",
+                "room": "Room 201"
             },
             "S4": {
-                "subject": "Geology",
-                "teacher": "Professor Pink",
-                "room": "Room 302"
+                "subject": "Economics",
+                "teacher": "Professor Maroon",
+                "room": "Room 202"
             }
         },
         "6": {
             "P1": {
                 "subject": "English",
-                "teacher": "Professor Purple",
-                "room": "Room 101"
-            },
-            "P2": {
-                "subject": "English",
-                "teacher": "Professor Grey",
-                "room": "Room 102"
-            },
-            "P3": {
-                "subject": "English",
                 "teacher": "Professor Olive",
-                "room": "Room 103"
-            },
-            "P4": {
-                "subject": "Maths",
-                "teacher": "Professor Gold",
                 "room": "Room 104"
             },
-            "P5": {
+            "P2": {
+                "subject": "Maths",
+                "teacher": "Professor Gold",
+                "room": "Room 301"
+            },
+            "P3": {
                 "subject": "Science",
                 "teacher": "Professor Magenta",
-                "room": "Room 201"
+                "room": "Room 302"
+            },
+            "P4": {
+                "subject": "English",
+                "teacher": "Professor Purple",
+                "room": "Room 102"
+            },
+            "P5": {
+                "subject": "Geography",
+                "teacher": "Professor Indigo",
+                "room": "Room 303"
             },
             "P6": {
                 "subject": "Maths",
                 "teacher": "Professor White",
-                "room": "Room 202"
+                "room": "Room 203"
             },
             "S1": {
-                "subject": "History",
-                "teacher": "Professor Indigo",
-                "room": "Room 203"
+                "subject": "English",
+                "teacher": "Professor Grey",
+                "room": "Room 204"
             },
             "S2": {
                 "subject": "History",
                 "teacher": "Professor Green",
-                "room": "Room 204"
+                "room": "Room 101"
             },
             "S3": {
-                "subject": "Chemistry",
-                "teacher": "Professor Black",
-                "room": "Room 301"
+                "subject": "Biology",
+                "teacher": "Professor Navy",
+                "room": "Room 201"
             },
             "S4": {
-                "subject": "Economics",
-                "teacher": "Professor Maroon",
-                "room": "Room 302"
+                "subject": "Geology",
+                "teacher": "Professor Pink",
+                "room": "Room 202"
             }
         },
         "7": {
             "P1": {
                 "subject": "English",
                 "teacher": "Professor Olive",
+                "room": "Room 104"
+            },
+            "P2": {
+                "subject": "Maths",
+                "teacher": "Professor White",
+                "room": "Room 301"
+            },
+            "P3": {
+                "subject": "English",
+                "teacher": "Professor Purple",
+                "room": "Room 302"
+            },
+            "P4": {
+                "subject": "Science",
+                "teacher": "Professor Magenta",
+                "room": "Room 303"
+            },
+            "P5": {
+                "subject": "Geography",
+                "teacher": "Professor Indigo",
+                "room": "Room 101"
+            },
+            "P6": {
+                "subject": "History",
+                "teacher": "Professor Green",
+                "room": "Room 204"
+            },
+            "S1": {
+                "subject": "English",
+                "teacher": "Professor Grey",
+                "room": "Room 103"
+            },
+            "S2": {
+                "subject": "Maths",
+                "teacher": "Professor Gold",
                 "room": "Room 102"
+            },
+            "S3": {
+                "subject": "Biology",
+                "teacher": "Professor Navy",
+                "room": "Room 201"
+            },
+            "S4": {
+                "subject": "Geology",
+                "teacher": "Professor Pink",
+                "room": "Room 202"
+            }
+        },
+        "8": {
+            "P1": {
+                "subject": "Science",
+                "teacher": "Professor Magenta",
+                "room": "Room 301"
             },
             "P2": {
                 "subject": "English",
-                "teacher": "Professor Purple",
-                "room": "Room 101"
+                "teacher": "Professor Olive",
+                "room": "Room 104"
             },
             "P3": {
                 "subject": "Maths",
                 "teacher": "Professor Gold",
-                "room": "Room 302"
+                "room": "Room 102"
             },
             "P4": {
                 "subject": "Maths",
@@ -336,17 +388,17 @@
             "P5": {
                 "subject": "English",
                 "teacher": "Professor Grey",
-                "room": "Room 104"
+                "room": "Room 101"
             },
             "P6": {
-                "subject": "History",
-                "teacher": "Professor Green",
-                "room": "Room 201"
+                "subject": "English",
+                "teacher": "Professor Purple",
+                "room": "Room 204"
             },
             "S1": {
-                "subject": "Art",
-                "teacher": "Professor Magenta",
-                "room": "Room 202"
+                "subject": "History",
+                "teacher": "Professor Green",
+                "room": "Room 302"
             },
             "S2": {
                 "subject": "Geography",
@@ -354,66 +406,14 @@
                 "room": "Room 203"
             },
             "S3": {
-                "subject": "Chemistry",
-                "teacher": "Professor Black",
-                "room": "Room 204"
-            },
-            "S4": {
-                "subject": "Economics",
+                "subject": "Biology",
                 "teacher": "Professor Navy",
-                "room": "Room 301"
-            }
-        },
-        "8": {
-            "P1": {
-                "subject": "Science",
-                "teacher": "Professor Magenta",
-                "room": "Room 101"
-            },
-            "P2": {
-                "subject": "Maths",
-                "teacher": "Professor White",
-                "room": "Room 102"
-            },
-            "P3": {
-                "subject": "English",
-                "teacher": "Professor Olive",
-                "room": "Room 103"
-            },
-            "P4": {
-                "subject": "Maths",
-                "teacher": "Professor Gold",
-                "room": "Room 104"
-            },
-            "P5": {
-                "subject": "English",
-                "teacher": "Professor Purple",
-                "room": "Room 202"
-            },
-            "P6": {
-                "subject": "English",
-                "teacher": "Professor Grey",
                 "room": "Room 201"
-            },
-            "S1": {
-                "subject": "History",
-                "teacher": "Professor Green",
-                "room": "Room 203"
-            },
-            "S2": {
-                "subject": "History",
-                "teacher": "Professor Indigo",
-                "room": "Room 204"
-            },
-            "S3": {
-                "subject": "Chemistry",
-                "teacher": "Professor Maroon",
-                "room": "Room 301"
             },
             "S4": {
                 "subject": "Geology",
                 "teacher": "Professor Pink",
-                "room": "Room 302"
+                "room": "Room 202"
             }
         }
     },
@@ -422,94 +422,42 @@
             "P1": {
                 "subject": "Maths",
                 "teacher": "Professor Gold",
-                "room": "Room 101"
-            },
-            "P2": {
-                "subject": "Maths",
-                "teacher": "Professor White",
-                "room": "Room 102"
-            },
-            "P3": {
-                "subject": "English",
-                "teacher": "Professor Olive",
-                "room": "Room 103"
-            },
-            "P4": {
-                "subject": "English",
-                "teacher": "Professor Grey",
-                "room": "Room 204"
-            },
-            "P5": {
-                "subject": "Science",
-                "teacher": "Professor Magenta",
-                "room": "Room 104"
-            },
-            "P6": {
-                "subject": "English",
-                "teacher": "Professor Purple",
-                "room": "Room 201"
-            },
-            "S1": {
-                "subject": "History",
-                "teacher": "Professor Green",
-                "room": "Room 202"
-            },
-            "S2": {
-                "subject": "Geography",
-                "teacher": "Professor Indigo",
-                "room": "Room 203"
-            },
-            "S3": {
-                "subject": "Chemistry",
-                "teacher": "Professor Maroon",
-                "room": "Room 301"
-            },
-            "S4": {
-                "subject": "Geology",
-                "teacher": "Professor Pink",
                 "room": "Room 302"
-            }
-        },
-        "2": {
-            "P1": {
-                "subject": "Science",
-                "teacher": "Professor Magenta",
-                "room": "Room 102"
             },
             "P2": {
-                "subject": "English",
-                "teacher": "Professor Purple",
-                "room": "Room 101"
+                "subject": "Maths",
+                "teacher": "Professor White",
+                "room": "Room 203"
             },
             "P3": {
                 "subject": "English",
-                "teacher": "Professor Grey",
-                "room": "Room 103"
+                "teacher": "Professor Olive",
+                "room": "Room 104"
             },
             "P4": {
-                "subject": "Maths",
-                "teacher": "Professor White",
-                "room": "Room 104"
+                "subject": "English",
+                "teacher": "Professor Grey",
+                "room": "Room 201"
             },
             "P5": {
                 "subject": "Geography",
                 "teacher": "Professor Indigo",
-                "room": "Room 201"
+                "room": "Room 204"
             },
             "P6": {
-                "subject": "Maths",
-                "teacher": "Professor Gold",
-                "room": "Room 202"
+                "subject": "History",
+                "teacher": "Professor Green",
+                "room": "Room 102"
             },
             "S1": {
                 "subject": "English",
-                "teacher": "Professor Olive",
-                "room": "Room 203"
+                "teacher": "Professor Purple",
+                "room": "Room 202"
             },
             "S2": {
-                "subject": "History",
-                "teacher": "Professor Green",
-                "room": "Room 204"
+                "subject": "Art",
+                "teacher": "Professor Magenta",
+                "room": "Room 103"
             },
             "S3": {
                 "subject": "Biology",
@@ -517,207 +465,259 @@
                 "room": "Room 301"
             },
             "S4": {
-                "subject": "Economics",
-                "teacher": "Professor Maroon",
-                "room": "Room 302"
+                "subject": "Geology",
+                "teacher": "Professor Pink",
+                "room": "Room 101"
+            }
+        },
+        "2": {
+            "P1": {
+                "subject": "Maths",
+                "teacher": "Professor White",
+                "room": "Room 204"
+            },
+            "P2": {
+                "subject": "Maths",
+                "teacher": "Professor Gold",
+                "room": "Room 101"
+            },
+            "P3": {
+                "subject": "English",
+                "teacher": "Professor Grey",
+                "room": "Room 201"
+            },
+            "P4": {
+                "subject": "Science",
+                "teacher": "Professor Magenta",
+                "room": "Room 301"
+            },
+            "P5": {
+                "subject": "English",
+                "teacher": "Professor Olive",
+                "room": "Room 203"
+            },
+            "P6": {
+                "subject": "English",
+                "teacher": "Professor Purple",
+                "room": "Room 202"
+            },
+            "S1": {
+                "subject": "History",
+                "teacher": "Professor Indigo",
+                "room": "Room 103"
+            },
+            "S2": {
+                "subject": "History",
+                "teacher": "Professor Green",
+                "room": "Room 104"
+            },
+            "S3": {
+                "subject": "Chemistry",
+                "teacher": "Professor Black",
+                "room": "Room 303"
+            },
+            "S4": {
+                "subject": "Geology",
+                "teacher": "Professor Pink",
+                "room": "Room 102"
             }
         },
         "3": {
             "P1": {
-                "subject": "English",
-                "teacher": "Professor Purple",
-                "room": "Room 101"
+                "subject": "Maths",
+                "teacher": "Professor Gold",
+                "room": "Room 302"
             },
             "P2": {
                 "subject": "English",
-                "teacher": "Professor Olive",
-                "room": "Room 102"
+                "teacher": "Professor Purple",
+                "room": "Room 203"
             },
             "P3": {
+                "subject": "English",
+                "teacher": "Professor Grey",
+                "room": "Room 201"
+            },
+            "P4": {
+                "subject": "Science",
+                "teacher": "Professor Magenta",
+                "room": "Room 301"
+            },
+            "P5": {
+                "subject": "Geography",
+                "teacher": "Professor Indigo",
+                "room": "Room 204"
+            },
+            "P6": {
+                "subject": "History",
+                "teacher": "Professor Green",
+                "room": "Room 202"
+            },
+            "S1": {
+                "subject": "English",
+                "teacher": "Professor Olive",
+                "room": "Room 103"
+            },
+            "S2": {
+                "subject": "Maths",
+                "teacher": "Professor White",
+                "room": "Room 104"
+            },
+            "S3": {
+                "subject": "Chemistry",
+                "teacher": "Professor Black",
+                "room": "Room 303"
+            },
+            "S4": {
+                "subject": "Geology",
+                "teacher": "Professor Pink",
+                "room": "Room 102"
+            }
+        },
+        "4": {
+            "P1": {
+                "subject": "English",
+                "teacher": "Professor Olive",
+                "room": "Room 203"
+            },
+            "P2": {
+                "subject": "Maths",
+                "teacher": "Professor White",
+                "room": "Room 101"
+            },
+            "P3": {
+                "subject": "English",
+                "teacher": "Professor Grey",
+                "room": "Room 201"
+            },
+            "P4": {
+                "subject": "English",
+                "teacher": "Professor Purple",
+                "room": "Room 103"
+            },
+            "P5": {
                 "subject": "Maths",
                 "teacher": "Professor Gold",
+                "room": "Room 302"
+            },
+            "P6": {
+                "subject": "Science",
+                "teacher": "Professor Magenta",
+                "room": "Room 301"
+            },
+            "S1": {
+                "subject": "History",
+                "teacher": "Professor Green",
+                "room": "Room 202"
+            },
+            "S2": {
+                "subject": "History",
+                "teacher": "Professor Indigo",
                 "room": "Room 104"
+            },
+            "S3": {
+                "subject": "Chemistry",
+                "teacher": "Professor Black",
+                "room": "Room 303"
+            },
+            "S4": {
+                "subject": "Geology",
+                "teacher": "Professor Pink",
+                "room": "Room 102"
+            }
+        },
+        "5": {
+            "P1": {
+                "subject": "Science",
+                "teacher": "Professor Magenta",
+                "room": "Room 301"
+            },
+            "P2": {
+                "subject": "English",
+                "teacher": "Professor Grey",
+                "room": "Room 101"
+            },
+            "P3": {
+                "subject": "English",
+                "teacher": "Professor Olive",
+                "room": "Room 201"
             },
             "P4": {
                 "subject": "Maths",
-                "teacher": "Professor White",
+                "teacher": "Professor Gold",
                 "room": "Room 103"
             },
             "P5": {
                 "subject": "Geography",
                 "teacher": "Professor Indigo",
-                "room": "Room 201"
-            },
-            "P6": {
-                "subject": "English",
-                "teacher": "Professor Grey",
-                "room": "Room 202"
-            },
-            "S1": {
-                "subject": "Art",
-                "teacher": "Professor Magenta",
                 "room": "Room 203"
             },
-            "S2": {
+            "P6": {
                 "subject": "History",
                 "teacher": "Professor Green",
-                "room": "Room 302"
-            },
-            "S3": {
-                "subject": "Chemistry",
-                "teacher": "Professor Maroon",
-                "room": "Room 204"
-            },
-            "S4": {
-                "subject": "Economics",
-                "teacher": "Professor Navy",
-                "room": "Room 301"
-            }
-        },
-        "4": {
-            "P1": {
-                "subject": "Maths",
-                "teacher": "Professor Gold",
-                "room": "Room 201"
-            },
-            "P2": {
-                "subject": "Maths",
-                "teacher": "Professor White",
-                "room": "Room 101"
-            },
-            "P3": {
-                "subject": "English",
-                "teacher": "Professor Olive",
                 "room": "Room 102"
             },
-            "P4": {
-                "subject": "English",
-                "teacher": "Professor Grey",
-                "room": "Room 103"
-            },
-            "P5": {
+            "S1": {
                 "subject": "English",
                 "teacher": "Professor Purple",
                 "room": "Room 104"
             },
-            "P6": {
-                "subject": "Science",
-                "teacher": "Professor Magenta",
-                "room": "Room 202"
-            },
-            "S1": {
-                "subject": "History",
-                "teacher": "Professor Indigo",
-                "room": "Room 203"
-            },
             "S2": {
-                "subject": "History",
-                "teacher": "Professor Green",
-                "room": "Room 204"
-            },
-            "S3": {
-                "subject": "Chemistry",
-                "teacher": "Professor Maroon",
-                "room": "Room 301"
-            },
-            "S4": {
-                "subject": "Economics",
-                "teacher": "Professor Navy",
-                "room": "Room 302"
-            }
-        },
-        "5": {
-            "P1": {
                 "subject": "Maths",
                 "teacher": "Professor White",
-                "room": "Room 201"
-            },
-            "P2": {
-                "subject": "English",
-                "teacher": "Professor Purple",
-                "room": "Room 101"
-            },
-            "P3": {
-                "subject": "Science",
-                "teacher": "Professor Magenta",
-                "room": "Room 102"
-            },
-            "P4": {
-                "subject": "English",
-                "teacher": "Professor Olive",
-                "room": "Room 103"
-            },
-            "P5": {
-                "subject": "Maths",
-                "teacher": "Professor Gold",
-                "room": "Room 104"
-            },
-            "P6": {
-                "subject": "History",
-                "teacher": "Professor Indigo",
-                "room": "Room 301"
-            },
-            "S1": {
-                "subject": "History",
-                "teacher": "Professor Green",
-                "room": "Room 202"
-            },
-            "S2": {
-                "subject": "English",
-                "teacher": "Professor Grey",
-                "room": "Room 203"
+                "room": "Room 302"
             },
             "S3": {
-                "subject": "Chemistry",
-                "teacher": "Professor Maroon",
-                "room": "Room 204"
+                "subject": "Physics",
+                "teacher": "Professor Navy",
+                "room": "Room 303"
             },
             "S4": {
-                "subject": "Economics",
-                "teacher": "Professor Navy",
-                "room": "Room 302"
+                "subject": "Geology",
+                "teacher": "Professor Pink",
+                "room": "Room 204"
             }
         },
         "6": {
             "P1": {
                 "subject": "English",
                 "teacher": "Professor Purple",
-                "room": "Room 102"
+                "room": "Room 303"
             },
             "P2": {
-                "subject": "English",
-                "teacher": "Professor Olive",
-                "room": "Room 101"
+                "subject": "Science",
+                "teacher": "Professor Magenta",
+                "room": "Room 301"
             },
             "P3": {
                 "subject": "English",
                 "teacher": "Professor Grey",
-                "room": "Room 103"
+                "room": "Room 101"
             },
             "P4": {
                 "subject": "Maths",
-                "teacher": "Professor White",
-                "room": "Room 104"
+                "teacher": "Professor Gold",
+                "room": "Room 103"
             },
             "P5": {
-                "subject": "Geography",
-                "teacher": "Professor Indigo",
-                "room": "Room 201"
+                "subject": "Maths",
+                "teacher": "Professor White",
+                "room": "Room 203"
             },
             "P6": {
+                "subject": "English",
+                "teacher": "Professor Olive",
+                "room": "Room 102"
+            },
+            "S1": {
+                "subject": "Geography",
+                "teacher": "Professor Indigo",
+                "room": "Room 104"
+            },
+            "S2": {
                 "subject": "History",
                 "teacher": "Professor Green",
                 "room": "Room 202"
-            },
-            "S1": {
-                "subject": "Science",
-                "teacher": "Professor Magenta",
-                "room": "Room 203"
-            },
-            "S2": {
-                "subject": "Maths",
-                "teacher": "Professor Gold",
-                "room": "Room 204"
             },
             "S3": {
                 "subject": "Biology",
@@ -725,214 +725,214 @@
                 "room": "Room 302"
             },
             "S4": {
-                "subject": "Geology",
-                "teacher": "Professor Pink",
-                "room": "Room 301"
+                "subject": "Economics",
+                "teacher": "Professor Maroon",
+                "room": "Room 204"
             }
         },
         "7": {
             "P1": {
-                "subject": "Maths",
-                "teacher": "Professor Gold",
-                "room": "Room 101"
-            },
-            "P2": {
                 "subject": "Science",
                 "teacher": "Professor Magenta",
-                "room": "Room 102"
+                "room": "Room 302"
+            },
+            "P2": {
+                "subject": "Maths",
+                "teacher": "Professor Gold",
+                "room": "Room 303"
             },
             "P3": {
                 "subject": "English",
                 "teacher": "Professor Purple",
-                "room": "Room 103"
+                "room": "Room 204"
             },
             "P4": {
-                "subject": "Maths",
-                "teacher": "Professor White",
-                "room": "Room 104"
-            },
-            "P5": {
-                "subject": "English",
-                "teacher": "Professor Olive",
-                "room": "Room 201"
-            },
-            "P6": {
                 "subject": "English",
                 "teacher": "Professor Grey",
-                "room": "Room 202"
+                "room": "Room 101"
             },
-            "S1": {
-                "subject": "History",
-                "teacher": "Professor Green",
-                "room": "Room 203"
-            },
-            "S2": {
+            "P5": {
                 "subject": "Geography",
                 "teacher": "Professor Indigo",
-                "room": "Room 204"
+                "room": "Room 202"
+            },
+            "P6": {
+                "subject": "Maths",
+                "teacher": "Professor White",
+                "room": "Room 203"
+            },
+            "S1": {
+                "subject": "English",
+                "teacher": "Professor Olive",
+                "room": "Room 104"
+            },
+            "S2": {
+                "subject": "History",
+                "teacher": "Professor Green",
+                "room": "Room 102"
             },
             "S3": {
                 "subject": "Chemistry",
-                "teacher": "Professor Black",
+                "teacher": "Professor Maroon",
                 "room": "Room 301"
             },
             "S4": {
-                "subject": "Economics",
-                "teacher": "Professor Navy",
-                "room": "Room 302"
+                "subject": "Geology",
+                "teacher": "Professor Pink",
+                "room": "Room 103"
             }
         },
         "8": {
             "P1": {
                 "subject": "English",
-                "teacher": "Professor Olive",
-                "room": "Room 102"
+                "teacher": "Professor Grey",
+                "room": "Room 302"
             },
             "P2": {
-                "subject": "Science",
-                "teacher": "Professor Magenta",
-                "room": "Room 101"
+                "subject": "English",
+                "teacher": "Professor Purple",
+                "room": "Room 204"
             },
             "P3": {
-                "subject": "Maths",
-                "teacher": "Professor White",
-                "room": "Room 103"
+                "subject": "Science",
+                "teacher": "Professor Magenta",
+                "room": "Room 303"
             },
             "P4": {
-                "subject": "English",
-                "teacher": "Professor Grey",
-                "room": "Room 104"
-            },
-            "P5": {
                 "subject": "Maths",
                 "teacher": "Professor Gold",
-                "room": "Room 302"
+                "room": "Room 101"
+            },
+            "P5": {
+                "subject": "English",
+                "teacher": "Professor Olive",
+                "room": "Room 104"
             },
             "P6": {
                 "subject": "History",
-                "teacher": "Professor Green",
-                "room": "Room 201"
-            },
-            "S1": {
-                "subject": "English",
-                "teacher": "Professor Purple",
+                "teacher": "Professor Indigo",
                 "room": "Room 202"
             },
-            "S2": {
-                "subject": "Geography",
-                "teacher": "Professor Indigo",
+            "S1": {
+                "subject": "Maths",
+                "teacher": "Professor White",
                 "room": "Room 203"
             },
-            "S3": {
-                "subject": "Physics",
-                "teacher": "Professor Navy",
-                "room": "Room 204"
+            "S2": {
+                "subject": "History",
+                "teacher": "Professor Green",
+                "room": "Room 102"
             },
-            "S4": {
-                "subject": "Economics",
+            "S3": {
+                "subject": "Chemistry",
                 "teacher": "Professor Maroon",
                 "room": "Room 301"
+            },
+            "S4": {
+                "subject": "Geology",
+                "teacher": "Professor Pink",
+                "room": "Room 103"
             }
         }
     },
     "Wednesday": {
         "1": {
             "P1": {
-                "subject": "Science",
-                "teacher": "Professor Magenta",
-                "room": "Room 101"
-            },
-            "P2": {
-                "subject": "English",
-                "teacher": "Professor Olive",
-                "room": "Room 102"
-            },
-            "P3": {
                 "subject": "Maths",
                 "teacher": "Professor Gold",
-                "room": "Room 103"
+                "room": "Room 303"
             },
-            "P4": {
-                "subject": "English",
-                "teacher": "Professor Grey",
-                "room": "Room 104"
-            },
-            "P5": {
-                "subject": "Maths",
-                "teacher": "Professor White",
-                "room": "Room 201"
-            },
-            "P6": {
-                "subject": "History",
-                "teacher": "Professor Indigo",
-                "room": "Room 202"
-            },
-            "S1": {
-                "subject": "English",
-                "teacher": "Professor Purple",
-                "room": "Room 203"
-            },
-            "S2": {
-                "subject": "History",
-                "teacher": "Professor Green",
-                "room": "Room 204"
-            },
-            "S3": {
-                "subject": "Chemistry",
-                "teacher": "Professor Black",
-                "room": "Room 302"
-            },
-            "S4": {
-                "subject": "Economics",
-                "teacher": "Professor Maroon",
-                "room": "Room 301"
-            }
-        },
-        "2": {
-            "P1": {
+            "P2": {
                 "subject": "English",
                 "teacher": "Professor Purple",
                 "room": "Room 101"
             },
-            "P2": {
-                "subject": "Science",
-                "teacher": "Professor Magenta",
-                "room": "Room 102"
-            },
             "P3": {
                 "subject": "English",
                 "teacher": "Professor Olive",
-                "room": "Room 103"
-            },
-            "P4": {
-                "subject": "Maths",
-                "teacher": "Professor White",
                 "room": "Room 104"
             },
-            "P5": {
+            "P4": {
                 "subject": "English",
                 "teacher": "Professor Grey",
-                "room": "Room 201"
+                "room": "Room 204"
+            },
+            "P5": {
+                "subject": "Maths",
+                "teacher": "Professor White",
+                "room": "Room 103"
             },
             "P6": {
                 "subject": "History",
-                "teacher": "Professor Green",
-                "room": "Room 202"
-            },
-            "S1": {
-                "subject": "Maths",
-                "teacher": "Professor Gold",
+                "teacher": "Professor Indigo",
                 "room": "Room 203"
             },
+            "S1": {
+                "subject": "Art",
+                "teacher": "Professor Magenta",
+                "room": "Room 102"
+            },
             "S2": {
-                "subject": "Geography",
-                "teacher": "Professor Indigo",
-                "room": "Room 204"
+                "subject": "History",
+                "teacher": "Professor Green",
+                "room": "Room 202"
             },
             "S3": {
                 "subject": "Biology",
                 "teacher": "Professor Navy",
+                "room": "Room 201"
+            },
+            "S4": {
+                "subject": "Economics",
+                "teacher": "Professor Maroon",
+                "room": "Room 302"
+            }
+        },
+        "2": {
+            "P1": {
+                "subject": "Maths",
+                "teacher": "Professor Gold",
+                "room": "Room 303"
+            },
+            "P2": {
+                "subject": "Maths",
+                "teacher": "Professor White",
+                "room": "Room 103"
+            },
+            "P3": {
+                "subject": "Science",
+                "teacher": "Professor Magenta",
                 "room": "Room 301"
+            },
+            "P4": {
+                "subject": "English",
+                "teacher": "Professor Purple",
+                "room": "Room 101"
+            },
+            "P5": {
+                "subject": "Geography",
+                "teacher": "Professor Indigo",
+                "room": "Room 203"
+            },
+            "P6": {
+                "subject": "History",
+                "teacher": "Professor Green",
+                "room": "Room 102"
+            },
+            "S1": {
+                "subject": "English",
+                "teacher": "Professor Olive",
+                "room": "Room 104"
+            },
+            "S2": {
+                "subject": "English",
+                "teacher": "Professor Grey",
+                "room": "Room 202"
+            },
+            "S3": {
+                "subject": "Biology",
+                "teacher": "Professor Navy",
+                "room": "Room 201"
             },
             "S4": {
                 "subject": "Economics",
@@ -942,828 +942,880 @@
         },
         "3": {
             "P1": {
-                "subject": "Science",
-                "teacher": "Professor Magenta",
-                "room": "Room 101"
+                "subject": "English",
+                "teacher": "Professor Purple",
+                "room": "Room 204"
             },
             "P2": {
-                "subject": "English",
-                "teacher": "Professor Grey",
-                "room": "Room 102"
+                "subject": "Science",
+                "teacher": "Professor Magenta",
+                "room": "Room 303"
             },
             "P3": {
+                "subject": "English",
+                "teacher": "Professor Olive",
+                "room": "Room 301"
+            },
+            "P4": {
                 "subject": "Maths",
                 "teacher": "Professor White",
                 "room": "Room 103"
             },
-            "P4": {
+            "P5": {
                 "subject": "Maths",
                 "teacher": "Professor Gold",
-                "room": "Room 104"
-            },
-            "P5": {
-                "subject": "English",
-                "teacher": "Professor Purple",
-                "room": "Room 301"
+                "room": "Room 203"
             },
             "P6": {
-                "subject": "History",
-                "teacher": "Professor Indigo",
-                "room": "Room 201"
+                "subject": "English",
+                "teacher": "Professor Grey",
+                "room": "Room 102"
             },
             "S1": {
-                "subject": "English",
-                "teacher": "Professor Olive",
-                "room": "Room 202"
+                "subject": "History",
+                "teacher": "Professor Green",
+                "room": "Room 101"
             },
             "S2": {
                 "subject": "History",
-                "teacher": "Professor Green",
-                "room": "Room 203"
+                "teacher": "Professor Indigo",
+                "room": "Room 202"
             },
             "S3": {
-                "subject": "Chemistry",
-                "teacher": "Professor Maroon",
-                "room": "Room 302"
+                "subject": "Biology",
+                "teacher": "Professor Navy",
+                "room": "Room 201"
             },
             "S4": {
-                "subject": "Geology",
-                "teacher": "Professor Pink",
-                "room": "Room 204"
+                "subject": "Economics",
+                "teacher": "Professor Maroon",
+                "room": "Room 302"
             }
         },
         "4": {
             "P1": {
                 "subject": "English",
                 "teacher": "Professor Purple",
-                "room": "Room 102"
+                "room": "Room 203"
             },
             "P2": {
                 "subject": "Science",
                 "teacher": "Professor Magenta",
-                "room": "Room 101"
+                "room": "Room 301"
             },
             "P3": {
                 "subject": "Maths",
-                "teacher": "Professor White",
-                "room": "Room 103"
+                "teacher": "Professor Gold",
+                "room": "Room 303"
             },
             "P4": {
                 "subject": "English",
-                "teacher": "Professor Olive",
+                "teacher": "Professor Grey",
                 "room": "Room 104"
             },
             "P5": {
                 "subject": "English",
-                "teacher": "Professor Grey",
-                "room": "Room 201"
+                "teacher": "Professor Olive",
+                "room": "Room 302"
             },
             "P6": {
                 "subject": "History",
-                "teacher": "Professor Indigo",
-                "room": "Room 202"
+                "teacher": "Professor Green",
+                "room": "Room 101"
             },
             "S1": {
                 "subject": "History",
-                "teacher": "Professor Green",
-                "room": "Room 203"
+                "teacher": "Professor Indigo",
+                "room": "Room 102"
             },
             "S2": {
                 "subject": "Maths",
-                "teacher": "Professor Gold",
-                "room": "Room 204"
+                "teacher": "Professor White",
+                "room": "Room 103"
             },
             "S3": {
-                "subject": "Physics",
+                "subject": "Biology",
                 "teacher": "Professor Navy",
-                "room": "Room 301"
+                "room": "Room 201"
             },
             "S4": {
                 "subject": "Economics",
                 "teacher": "Professor Maroon",
-                "room": "Room 302"
+                "room": "Room 204"
             }
         },
         "5": {
             "P1": {
-                "subject": "Maths",
-                "teacher": "Professor Gold",
-                "room": "Room 101"
+                "subject": "English",
+                "teacher": "Professor Purple",
+                "room": "Room 202"
             },
             "P2": {
                 "subject": "English",
-                "teacher": "Professor Olive",
-                "room": "Room 302"
+                "teacher": "Professor Grey",
+                "room": "Room 203"
             },
             "P3": {
-                "subject": "Science",
-                "teacher": "Professor Magenta",
-                "room": "Room 102"
+                "subject": "English",
+                "teacher": "Professor Olive",
+                "room": "Room 303"
             },
             "P4": {
+                "subject": "Maths",
+                "teacher": "Professor Gold",
+                "room": "Room 201"
+            },
+            "P5": {
+                "subject": "Science",
+                "teacher": "Professor Magenta",
+                "room": "Room 302"
+            },
+            "P6": {
+                "subject": "History",
+                "teacher": "Professor Indigo",
+                "room": "Room 101"
+            },
+            "S1": {
                 "subject": "Maths",
                 "teacher": "Professor White",
                 "room": "Room 103"
             },
-            "P5": {
-                "subject": "English",
-                "teacher": "Professor Grey",
-                "room": "Room 104"
-            },
-            "P6": {
+            "S2": {
                 "subject": "History",
                 "teacher": "Professor Green",
-                "room": "Room 201"
-            },
-            "S1": {
-                "subject": "Geography",
-                "teacher": "Professor Indigo",
-                "room": "Room 202"
-            },
-            "S2": {
-                "subject": "English",
-                "teacher": "Professor Purple",
-                "room": "Room 203"
+                "room": "Room 102"
             },
             "S3": {
                 "subject": "Chemistry",
                 "teacher": "Professor Black",
-                "room": "Room 204"
+                "room": "Room 301"
             },
             "S4": {
                 "subject": "Economics",
                 "teacher": "Professor Maroon",
-                "room": "Room 301"
+                "room": "Room 204"
             }
         },
         "6": {
             "P1": {
                 "subject": "Maths",
                 "teacher": "Professor White",
-                "room": "Room 102"
+                "room": "Room 103"
             },
             "P2": {
                 "subject": "English",
-                "teacher": "Professor Olive",
-                "room": "Room 101"
+                "teacher": "Professor Grey",
+                "room": "Room 203"
             },
             "P3": {
-                "subject": "Maths",
-                "teacher": "Professor Gold",
-                "room": "Room 103"
+                "subject": "English",
+                "teacher": "Professor Olive",
+                "room": "Room 303"
             },
             "P4": {
                 "subject": "English",
-                "teacher": "Professor Grey",
-                "room": "Room 104"
+                "teacher": "Professor Purple",
+                "room": "Room 202"
             },
             "P5": {
-                "subject": "Geography",
-                "teacher": "Professor Indigo",
+                "subject": "Maths",
+                "teacher": "Professor Gold",
                 "room": "Room 201"
             },
             "P6": {
                 "subject": "History",
-                "teacher": "Professor Green",
-                "room": "Room 202"
+                "teacher": "Professor Indigo",
+                "room": "Room 104"
             },
             "S1": {
-                "subject": "English",
-                "teacher": "Professor Purple",
-                "room": "Room 203"
+                "subject": "History",
+                "teacher": "Professor Green",
+                "room": "Room 102"
             },
             "S2": {
-                "subject": "Art",
+                "subject": "Science",
                 "teacher": "Professor Magenta",
-                "room": "Room 204"
+                "room": "Room 302"
             },
             "S3": {
                 "subject": "Chemistry",
-                "teacher": "Professor Maroon",
+                "teacher": "Professor Black",
                 "room": "Room 301"
             },
             "S4": {
-                "subject": "Geology",
-                "teacher": "Professor Pink",
-                "room": "Room 302"
+                "subject": "Economics",
+                "teacher": "Professor Maroon",
+                "room": "Room 204"
             }
         }
     },
     "Thursday": {
         "1": {
             "P1": {
-                "subject": "Maths",
-                "teacher": "Professor Gold",
-                "room": "Room 102"
+                "subject": "English",
+                "teacher": "Professor Purple",
+                "room": "Room 301"
             },
             "P2": {
-                "subject": "Science",
-                "teacher": "Professor Magenta",
-                "room": "Room 101"
+                "subject": "English",
+                "teacher": "Professor Grey",
+                "room": "Room 103"
             },
             "P3": {
                 "subject": "Maths",
                 "teacher": "Professor White",
-                "room": "Room 103"
+                "room": "Room 104"
             },
             "P4": {
                 "subject": "English",
-                "teacher": "Professor Purple",
-                "room": "Room 104"
-            },
-            "P5": {
-                "subject": "English",
-                "teacher": "Professor Grey",
+                "teacher": "Professor Olive",
                 "room": "Room 201"
             },
+            "P5": {
+                "subject": "Geography",
+                "teacher": "Professor Indigo",
+                "room": "Room 204"
+            },
             "P6": {
-                "subject": "English",
-                "teacher": "Professor Olive",
+                "subject": "Maths",
+                "teacher": "Professor Gold",
                 "room": "Room 202"
             },
             "S1": {
-                "subject": "History",
-                "teacher": "Professor Green",
-                "room": "Room 203"
+                "subject": "Science",
+                "teacher": "Professor Magenta",
+                "room": "Room 302"
             },
             "S2": {
                 "subject": "History",
-                "teacher": "Professor Indigo",
-                "room": "Room 204"
+                "teacher": "Professor Green",
+                "room": "Room 102"
             },
             "S3": {
                 "subject": "Chemistry",
                 "teacher": "Professor Maroon",
-                "room": "Room 301"
+                "room": "Room 303"
             },
             "S4": {
-                "subject": "Geology",
-                "teacher": "Professor Pink",
-                "room": "Room 302"
+                "subject": "Economics",
+                "teacher": "Professor Navy",
+                "room": "Room 203"
             }
         },
         "2": {
             "P1": {
-                "subject": "English",
-                "teacher": "Professor Olive",
-                "room": "Room 102"
-            },
-            "P2": {
-                "subject": "Maths",
-                "teacher": "Professor White",
-                "room": "Room 101"
-            },
-            "P3": {
-                "subject": "Maths",
-                "teacher": "Professor Gold",
-                "room": "Room 103"
-            },
-            "P4": {
-                "subject": "English",
-                "teacher": "Professor Grey",
-                "room": "Room 104"
-            },
-            "P5": {
-                "subject": "Geography",
-                "teacher": "Professor Indigo",
-                "room": "Room 201"
-            },
-            "P6": {
                 "subject": "Science",
                 "teacher": "Professor Magenta",
-                "room": "Room 202"
-            },
-            "S1": {
-                "subject": "English",
-                "teacher": "Professor Purple",
-                "room": "Room 203"
-            },
-            "S2": {
-                "subject": "History",
-                "teacher": "Professor Green",
-                "room": "Room 204"
-            },
-            "S3": {
-                "subject": "Biology",
-                "teacher": "Professor Navy",
                 "room": "Room 301"
-            },
-            "S4": {
-                "subject": "Economics",
-                "teacher": "Professor Maroon",
-                "room": "Room 302"
-            }
-        },
-        "3": {
-            "P1": {
-                "subject": "Maths",
-                "teacher": "Professor Gold",
-                "room": "Room 101"
             },
             "P2": {
                 "subject": "English",
                 "teacher": "Professor Purple",
-                "room": "Room 102"
+                "room": "Room 303"
             },
             "P3": {
                 "subject": "English",
-                "teacher": "Professor Olive",
-                "room": "Room 103"
+                "teacher": "Professor Grey",
+                "room": "Room 102"
             },
             "P4": {
-                "subject": "English",
-                "teacher": "Professor Grey",
-                "room": "Room 104"
-            },
-            "P5": {
-                "subject": "Geography",
-                "teacher": "Professor Indigo",
-                "room": "Room 201"
-            },
-            "P6": {
                 "subject": "Maths",
                 "teacher": "Professor White",
+                "room": "Room 101"
+            },
+            "P5": {
+                "subject": "English",
+                "teacher": "Professor Olive",
+                "room": "Room 104"
+            },
+            "P6": {
+                "subject": "History",
+                "teacher": "Professor Indigo",
                 "room": "Room 202"
             },
             "S1": {
-                "subject": "Art",
-                "teacher": "Professor Magenta",
-                "room": "Room 203"
-            },
-            "S2": {
                 "subject": "History",
                 "teacher": "Professor Green",
+                "room": "Room 201"
+            },
+            "S2": {
+                "subject": "Maths",
+                "teacher": "Professor Gold",
                 "room": "Room 204"
             },
             "S3": {
                 "subject": "Chemistry",
                 "teacher": "Professor Black",
-                "room": "Room 301"
+                "room": "Room 302"
             },
             "S4": {
                 "subject": "Economics",
                 "teacher": "Professor Navy",
+                "room": "Room 203"
+            }
+        },
+        "3": {
+            "P1": {
+                "subject": "English",
+                "teacher": "Professor Grey",
                 "room": "Room 302"
+            },
+            "P2": {
+                "subject": "English",
+                "teacher": "Professor Olive",
+                "room": "Room 201"
+            },
+            "P3": {
+                "subject": "English",
+                "teacher": "Professor Purple",
+                "room": "Room 204"
+            },
+            "P4": {
+                "subject": "Maths",
+                "teacher": "Professor White",
+                "room": "Room 101"
+            },
+            "P5": {
+                "subject": "Geography",
+                "teacher": "Professor Indigo",
+                "room": "Room 102"
+            },
+            "P6": {
+                "subject": "History",
+                "teacher": "Professor Green",
+                "room": "Room 202"
+            },
+            "S1": {
+                "subject": "Maths",
+                "teacher": "Professor Gold",
+                "room": "Room 103"
+            },
+            "S2": {
+                "subject": "Science",
+                "teacher": "Professor Magenta",
+                "room": "Room 301"
+            },
+            "S3": {
+                "subject": "Chemistry",
+                "teacher": "Professor Maroon",
+                "room": "Room 303"
+            },
+            "S4": {
+                "subject": "Economics",
+                "teacher": "Professor Navy",
+                "room": "Room 104"
             }
         },
         "4": {
             "P1": {
                 "subject": "English",
                 "teacher": "Professor Grey",
-                "room": "Room 101"
+                "room": "Room 104"
             },
             "P2": {
                 "subject": "Maths",
                 "teacher": "Professor Gold",
-                "room": "Room 102"
-            },
-            "P3": {
-                "subject": "Science",
-                "teacher": "Professor Magenta",
-                "room": "Room 103"
-            },
-            "P4": {
-                "subject": "English",
-                "teacher": "Professor Purple",
-                "room": "Room 104"
-            },
-            "P5": {
-                "subject": "Maths",
-                "teacher": "Professor White",
                 "room": "Room 201"
             },
-            "P6": {
-                "subject": "History",
+            "P3": {
+                "subject": "English",
+                "teacher": "Professor Olive",
+                "room": "Room 102"
+            },
+            "P4": {
+                "subject": "Maths",
+                "teacher": "Professor White",
+                "room": "Room 204"
+            },
+            "P5": {
+                "subject": "Geography",
                 "teacher": "Professor Indigo",
+                "room": "Room 101"
+            },
+            "P6": {
+                "subject": "English",
+                "teacher": "Professor Purple",
                 "room": "Room 202"
             },
             "S1": {
                 "subject": "History",
                 "teacher": "Professor Green",
-                "room": "Room 203"
+                "room": "Room 103"
             },
             "S2": {
-                "subject": "English",
-                "teacher": "Professor Olive",
-                "room": "Room 204"
+                "subject": "Science",
+                "teacher": "Professor Magenta",
+                "room": "Room 302"
             },
             "S3": {
-                "subject": "Chemistry",
-                "teacher": "Professor Maroon",
-                "room": "Room 301"
+                "subject": "Biology",
+                "teacher": "Professor Navy",
+                "room": "Room 203"
             },
             "S4": {
-                "subject": "Geology",
-                "teacher": "Professor Pink",
-                "room": "Room 302"
+                "subject": "Economics",
+                "teacher": "Professor Maroon",
+                "room": "Room 303"
             }
         },
         "5": {
             "P1": {
-                "subject": "Maths",
-                "teacher": "Professor White",
-                "room": "Room 101"
+                "subject": "English",
+                "teacher": "Professor Purple",
+                "room": "Room 201"
             },
             "P2": {
+                "subject": "Science",
+                "teacher": "Professor Magenta",
+                "room": "Room 303"
+            },
+            "P3": {
                 "subject": "English",
                 "teacher": "Professor Grey",
                 "room": "Room 102"
             },
-            "P3": {
-                "subject": "Science",
-                "teacher": "Professor Magenta",
+            "P4": {
+                "subject": "Maths",
+                "teacher": "Professor White",
+                "room": "Room 204"
+            },
+            "P5": {
+                "subject": "Geography",
+                "teacher": "Professor Indigo",
+                "room": "Room 101"
+            },
+            "P6": {
+                "subject": "History",
+                "teacher": "Professor Green",
                 "room": "Room 103"
             },
-            "P4": {
+            "S1": {
                 "subject": "Maths",
                 "teacher": "Professor Gold",
                 "room": "Room 104"
             },
-            "P5": {
+            "S2": {
                 "subject": "English",
                 "teacher": "Professor Olive",
-                "room": "Room 201"
-            },
-            "P6": {
-                "subject": "English",
-                "teacher": "Professor Purple",
                 "room": "Room 202"
             },
-            "S1": {
-                "subject": "Geography",
-                "teacher": "Professor Indigo",
-                "room": "Room 203"
-            },
-            "S2": {
-                "subject": "History",
-                "teacher": "Professor Green",
-                "room": "Room 204"
-            },
             "S3": {
-                "subject": "Chemistry",
-                "teacher": "Professor Maroon",
-                "room": "Room 301"
+                "subject": "Biology",
+                "teacher": "Professor Navy",
+                "room": "Room 203"
             },
             "S4": {
                 "subject": "Geology",
                 "teacher": "Professor Pink",
-                "room": "Room 302"
+                "room": "Room 301"
             }
         },
         "6": {
             "P1": {
-                "subject": "Science",
-                "teacher": "Professor Magenta",
-                "room": "Room 102"
-            },
-            "P2": {
                 "subject": "Maths",
                 "teacher": "Professor White",
-                "room": "Room 101"
+                "room": "Room 303"
+            },
+            "P2": {
+                "subject": "English",
+                "teacher": "Professor Grey",
+                "room": "Room 302"
             },
             "P3": {
                 "subject": "English",
-                "teacher": "Professor Olive",
-                "room": "Room 103"
+                "teacher": "Professor Purple",
+                "room": "Room 102"
             },
             "P4": {
                 "subject": "Maths",
                 "teacher": "Professor Gold",
-                "room": "Room 104"
+                "room": "Room 201"
             },
             "P5": {
-                "subject": "English",
-                "teacher": "Professor Purple",
-                "room": "Room 201"
+                "subject": "Geography",
+                "teacher": "Professor Indigo",
+                "room": "Room 204"
             },
             "P6": {
                 "subject": "History",
                 "teacher": "Professor Green",
-                "room": "Room 202"
+                "room": "Room 101"
             },
             "S1": {
                 "subject": "English",
-                "teacher": "Professor Grey",
-                "room": "Room 203"
+                "teacher": "Professor Olive",
+                "room": "Room 202"
             },
             "S2": {
-                "subject": "History",
-                "teacher": "Professor Indigo",
-                "room": "Room 204"
+                "subject": "Art",
+                "teacher": "Professor Magenta",
+                "room": "Room 103"
             },
             "S3": {
-                "subject": "Chemistry",
-                "teacher": "Professor Maroon",
-                "room": "Room 301"
+                "subject": "Biology",
+                "teacher": "Professor Navy",
+                "room": "Room 203"
             },
             "S4": {
-                "subject": "Economics",
-                "teacher": "Professor Navy",
-                "room": "Room 302"
+                "subject": "Geology",
+                "teacher": "Professor Pink",
+                "room": "Room 301"
             }
         },
         "7": {
             "P1": {
                 "subject": "Maths",
                 "teacher": "Professor White",
-                "room": "Room 101"
+                "room": "Room 303"
             },
             "P2": {
                 "subject": "English",
-                "teacher": "Professor Grey",
-                "room": "Room 102"
+                "teacher": "Professor Purple",
+                "room": "Room 302"
             },
             "P3": {
-                "subject": "English",
-                "teacher": "Professor Olive",
-                "room": "Room 103"
+                "subject": "Science",
+                "teacher": "Professor Magenta",
+                "room": "Room 301"
             },
             "P4": {
                 "subject": "Maths",
                 "teacher": "Professor Gold",
-                "room": "Room 104"
-            },
-            "P5": {
-                "subject": "Geography",
-                "teacher": "Professor Indigo",
                 "room": "Room 201"
             },
+            "P5": {
+                "subject": "English",
+                "teacher": "Professor Olive",
+                "room": "Room 104"
+            },
             "P6": {
+                "subject": "History",
+                "teacher": "Professor Indigo",
+                "room": "Room 204"
+            },
+            "S1": {
                 "subject": "History",
                 "teacher": "Professor Green",
                 "room": "Room 202"
             },
-            "S1": {
-                "subject": "English",
-                "teacher": "Professor Purple",
-                "room": "Room 203"
-            },
             "S2": {
-                "subject": "Art",
-                "teacher": "Professor Magenta",
-                "room": "Room 204"
+                "subject": "English",
+                "teacher": "Professor Grey",
+                "room": "Room 103"
             },
             "S3": {
                 "subject": "Biology",
                 "teacher": "Professor Navy",
-                "room": "Room 301"
-            },
-            "S4": {
-                "subject": "Economics",
-                "teacher": "Professor Maroon",
-                "room": "Room 302"
-            }
-        },
-        "8": {
-            "P1": {
-                "subject": "Science",
-                "teacher": "Professor Magenta",
-                "room": "Room 101"
-            },
-            "P2": {
-                "subject": "English",
-                "teacher": "Professor Grey",
-                "room": "Room 102"
-            },
-            "P3": {
-                "subject": "English",
-                "teacher": "Professor Olive",
-                "room": "Room 103"
-            },
-            "P4": {
-                "subject": "Maths",
-                "teacher": "Professor White",
-                "room": "Room 104"
-            },
-            "P5": {
-                "subject": "Maths",
-                "teacher": "Professor Gold",
-                "room": "Room 201"
-            },
-            "P6": {
-                "subject": "English",
-                "teacher": "Professor Purple",
-                "room": "Room 202"
-            },
-            "S1": {
-                "subject": "History",
-                "teacher": "Professor Green",
                 "room": "Room 203"
-            },
-            "S2": {
-                "subject": "Geography",
-                "teacher": "Professor Indigo",
-                "room": "Room 204"
-            },
-            "S3": {
-                "subject": "Chemistry",
-                "teacher": "Professor Maroon",
-                "room": "Room 301"
             },
             "S4": {
                 "subject": "Geology",
                 "teacher": "Professor Pink",
+                "room": "Room 101"
+            }
+        },
+        "8": {
+            "P1": {
+                "subject": "English",
+                "teacher": "Professor Purple",
+                "room": "Room 202"
+            },
+            "P2": {
+                "subject": "Maths",
+                "teacher": "Professor Gold",
                 "room": "Room 302"
+            },
+            "P3": {
+                "subject": "Maths",
+                "teacher": "Professor White",
+                "room": "Room 301"
+            },
+            "P4": {
+                "subject": "English",
+                "teacher": "Professor Grey",
+                "room": "Room 201"
+            },
+            "P5": {
+                "subject": "English",
+                "teacher": "Professor Olive",
+                "room": "Room 104"
+            },
+            "P6": {
+                "subject": "History",
+                "teacher": "Professor Indigo",
+                "room": "Room 204"
+            },
+            "S1": {
+                "subject": "History",
+                "teacher": "Professor Green",
+                "room": "Room 103"
+            },
+            "S2": {
+                "subject": "Science",
+                "teacher": "Professor Magenta",
+                "room": "Room 303"
+            },
+            "S3": {
+                "subject": "Biology",
+                "teacher": "Professor Navy",
+                "room": "Room 203"
+            },
+            "S4": {
+                "subject": "Geology",
+                "teacher": "Professor Pink",
+                "room": "Room 101"
             }
         }
     },
     "Friday": {
         "1": {
             "P1": {
-                "subject": "Maths",
-                "teacher": "Professor Gold",
-                "room": "Room 101"
-            },
-            "P2": {
-                "subject": "English",
-                "teacher": "Professor Olive",
-                "room": "Room 102"
-            },
-            "P3": {
-                "subject": "Maths",
-                "teacher": "Professor White",
-                "room": "Room 103"
-            },
-            "P4": {
-                "subject": "English",
-                "teacher": "Professor Grey",
-                "room": "Room 104"
-            },
-            "P5": {
-                "subject": "English",
-                "teacher": "Professor Purple",
-                "room": "Room 201"
-            },
-            "P6": {
                 "subject": "Science",
                 "teacher": "Professor Magenta",
-                "room": "Room 202"
-            },
-            "S1": {
-                "subject": "Geography",
-                "teacher": "Professor Indigo",
-                "room": "Room 203"
-            },
-            "S2": {
-                "subject": "History",
-                "teacher": "Professor Green",
-                "room": "Room 204"
-            },
-            "S3": {
-                "subject": "Physics",
-                "teacher": "Professor Navy",
                 "room": "Room 301"
             },
-            "S4": {
-                "subject": "Economics",
-                "teacher": "Professor Maroon",
-                "room": "Room 302"
-            }
-        },
-        "2": {
-            "P1": {
-                "subject": "Maths",
-                "teacher": "Professor Gold",
-                "room": "Room 101"
-            },
             "P2": {
-                "subject": "English",
-                "teacher": "Professor Olive",
-                "room": "Room 102"
+                "subject": "Maths",
+                "teacher": "Professor White",
+                "room": "Room 204"
             },
             "P3": {
-                "subject": "English",
-                "teacher": "Professor Grey",
-                "room": "Room 103"
-            },
-            "P4": {
-                "subject": "Science",
-                "teacher": "Professor Magenta",
+                "subject": "Maths",
+                "teacher": "Professor Gold",
                 "room": "Room 104"
             },
+            "P4": {
+                "subject": "English",
+                "teacher": "Professor Olive",
+                "room": "Room 203"
+            },
             "P5": {
+                "subject": "English",
+                "teacher": "Professor Grey",
+                "room": "Room 101"
+            },
+            "P6": {
+                "subject": "English",
+                "teacher": "Professor Purple",
+                "room": "Room 103"
+            },
+            "S1": {
+                "subject": "History",
+                "teacher": "Professor Green",
+                "room": "Room 202"
+            },
+            "S2": {
                 "subject": "Geography",
                 "teacher": "Professor Indigo",
                 "room": "Room 201"
-            },
-            "P6": {
-                "subject": "Maths",
-                "teacher": "Professor White",
-                "room": "Room 202"
-            },
-            "S1": {
-                "subject": "English",
-                "teacher": "Professor Purple",
-                "room": "Room 203"
-            },
-            "S2": {
-                "subject": "History",
-                "teacher": "Professor Green",
-                "room": "Room 204"
             },
             "S3": {
                 "subject": "Chemistry",
                 "teacher": "Professor Maroon",
-                "room": "Room 301"
+                "room": "Room 302"
             },
             "S4": {
                 "subject": "Geology",
                 "teacher": "Professor Pink",
+                "room": "Room 102"
+            }
+        },
+        "2": {
+            "P1": {
+                "subject": "Science",
+                "teacher": "Professor Magenta",
+                "room": "Room 303"
+            },
+            "P2": {
+                "subject": "Maths",
+                "teacher": "Professor White",
+                "room": "Room 204"
+            },
+            "P3": {
+                "subject": "English",
+                "teacher": "Professor Olive",
+                "room": "Room 203"
+            },
+            "P4": {
+                "subject": "English",
+                "teacher": "Professor Purple",
+                "room": "Room 103"
+            },
+            "P5": {
+                "subject": "Maths",
+                "teacher": "Professor Gold",
+                "room": "Room 201"
+            },
+            "P6": {
+                "subject": "History",
+                "teacher": "Professor Indigo",
+                "room": "Room 202"
+            },
+            "S1": {
+                "subject": "History",
+                "teacher": "Professor Green",
+                "room": "Room 104"
+            },
+            "S2": {
+                "subject": "English",
+                "teacher": "Professor Grey",
+                "room": "Room 301"
+            },
+            "S3": {
+                "subject": "Chemistry",
+                "teacher": "Professor Maroon",
                 "room": "Room 302"
+            },
+            "S4": {
+                "subject": "Economics",
+                "teacher": "Professor Navy",
+                "room": "Room 101"
             }
         },
         "3": {
             "P1": {
-                "subject": "English",
-                "teacher": "Professor Purple",
-                "room": "Room 101"
+                "subject": "Science",
+                "teacher": "Professor Magenta",
+                "room": "Room 301"
             },
             "P2": {
                 "subject": "English",
                 "teacher": "Professor Grey",
-                "room": "Room 102"
+                "room": "Room 204"
             },
             "P3": {
-                "subject": "Maths",
-                "teacher": "Professor Gold",
-                "room": "Room 103"
-            },
-            "P4": {
-                "subject": "Science",
-                "teacher": "Professor Magenta",
-                "room": "Room 104"
-            },
-            "P5": {
-                "subject": "Geography",
-                "teacher": "Professor Indigo",
-                "room": "Room 201"
-            },
-            "P6": {
-                "subject": "English",
-                "teacher": "Professor Olive",
-                "room": "Room 202"
-            },
-            "S1": {
                 "subject": "Maths",
                 "teacher": "Professor White",
                 "room": "Room 203"
             },
-            "S2": {
+            "P4": {
+                "subject": "English",
+                "teacher": "Professor Purple",
+                "room": "Room 103"
+            },
+            "P5": {
+                "subject": "Geography",
+                "teacher": "Professor Indigo",
+                "room": "Room 102"
+            },
+            "P6": {
                 "subject": "History",
                 "teacher": "Professor Green",
-                "room": "Room 204"
+                "room": "Room 202"
+            },
+            "S1": {
+                "subject": "English",
+                "teacher": "Professor Olive",
+                "room": "Room 303"
+            },
+            "S2": {
+                "subject": "Maths",
+                "teacher": "Professor Gold",
+                "room": "Room 104"
             },
             "S3": {
-                "subject": "Physics",
-                "teacher": "Professor Navy",
-                "room": "Room 301"
-            },
-            "S4": {
-                "subject": "Economics",
+                "subject": "Chemistry",
                 "teacher": "Professor Maroon",
                 "room": "Room 302"
+            },
+            "S4": {
+                "subject": "Geology",
+                "teacher": "Professor Pink",
+                "room": "Room 101"
             }
         },
         "4": {
             "P1": {
-                "subject": "Maths",
-                "teacher": "Professor White",
-                "room": "Room 101"
-            },
-            "P2": {
                 "subject": "Science",
                 "teacher": "Professor Magenta",
-                "room": "Room 102"
+                "room": "Room 301"
+            },
+            "P2": {
+                "subject": "Maths",
+                "teacher": "Professor White",
+                "room": "Room 104"
             },
             "P3": {
+                "subject": "English",
+                "teacher": "Professor Olive",
+                "room": "Room 201"
+            },
+            "P4": {
                 "subject": "English",
                 "teacher": "Professor Purple",
                 "room": "Room 103"
             },
-            "P4": {
-                "subject": "English",
-                "teacher": "Professor Grey",
-                "room": "Room 104"
-            },
             "P5": {
-                "subject": "Geography",
-                "teacher": "Professor Indigo",
-                "room": "Room 201"
+                "subject": "Maths",
+                "teacher": "Professor Gold",
+                "room": "Room 102"
             },
             "P6": {
                 "subject": "History",
                 "teacher": "Professor Green",
-                "room": "Room 202"
+                "room": "Room 203"
             },
             "S1": {
+                "subject": "Geography",
+                "teacher": "Professor Indigo",
+                "room": "Room 303"
+            },
+            "S2": {
+                "subject": "English",
+                "teacher": "Professor Grey",
+                "room": "Room 204"
+            },
+            "S3": {
+                "subject": "Chemistry",
+                "teacher": "Professor Black",
+                "room": "Room 302"
+            },
+            "S4": {
+                "subject": "Economics",
+                "teacher": "Professor Maroon",
+                "room": "Room 202"
+            }
+        },
+        "5": {
+            "P1": {
                 "subject": "English",
                 "teacher": "Professor Olive",
+                "room": "Room 303"
+            },
+            "P2": {
+                "subject": "Science",
+                "teacher": "Professor Magenta",
+                "room": "Room 302"
+            },
+            "P3": {
+                "subject": "English",
+                "teacher": "Professor Purple",
+                "room": "Room 201"
+            },
+            "P4": {
+                "subject": "English",
+                "teacher": "Professor Grey",
+                "room": "Room 202"
+            },
+            "P5": {
+                "subject": "Geography",
+                "teacher": "Professor Indigo",
+                "room": "Room 204"
+            },
+            "P6": {
+                "subject": "History",
+                "teacher": "Professor Green",
+                "room": "Room 104"
+            },
+            "S1": {
+                "subject": "Maths",
+                "teacher": "Professor Gold",
                 "room": "Room 203"
             },
             "S2": {
                 "subject": "Maths",
-                "teacher": "Professor Gold",
-                "room": "Room 204"
+                "teacher": "Professor White",
+                "room": "Room 102"
             },
             "S3": {
                 "subject": "Biology",
@@ -1771,217 +1823,165 @@
                 "room": "Room 301"
             },
             "S4": {
-                "subject": "Economics",
-                "teacher": "Professor Maroon",
-                "room": "Room 302"
-            }
-        },
-        "5": {
-            "P1": {
-                "subject": "Maths",
-                "teacher": "Professor White",
+                "subject": "Geology",
+                "teacher": "Professor Pink",
                 "room": "Room 101"
-            },
-            "P2": {
-                "subject": "Maths",
-                "teacher": "Professor Gold",
-                "room": "Room 102"
-            },
-            "P3": {
-                "subject": "English",
-                "teacher": "Professor Purple",
-                "room": "Room 103"
-            },
-            "P4": {
-                "subject": "English",
-                "teacher": "Professor Grey",
-                "room": "Room 104"
-            },
-            "P5": {
-                "subject": "English",
-                "teacher": "Professor Olive",
-                "room": "Room 201"
-            },
-            "P6": {
-                "subject": "History",
-                "teacher": "Professor Green",
-                "room": "Room 202"
-            },
-            "S1": {
-                "subject": "Art",
-                "teacher": "Professor Magenta",
-                "room": "Room 203"
-            },
-            "S2": {
-                "subject": "Geography",
-                "teacher": "Professor Indigo",
-                "room": "Room 204"
-            },
-            "S3": {
-                "subject": "Chemistry",
-                "teacher": "Professor Black",
-                "room": "Room 301"
-            },
-            "S4": {
-                "subject": "Economics",
-                "teacher": "Professor Maroon",
-                "room": "Room 302"
             }
         },
         "6": {
             "P1": {
-                "subject": "English",
-                "teacher": "Professor Olive",
-                "room": "Room 101"
+                "subject": "Maths",
+                "teacher": "Professor Gold",
+                "room": "Room 104"
             },
             "P2": {
-                "subject": "English",
-                "teacher": "Professor Grey",
-                "room": "Room 102"
+                "subject": "Science",
+                "teacher": "Professor Magenta",
+                "room": "Room 301"
             },
             "P3": {
-                "subject": "Maths",
-                "teacher": "Professor White",
-                "room": "Room 103"
+                "subject": "English",
+                "teacher": "Professor Purple",
+                "room": "Room 201"
             },
             "P4": {
                 "subject": "English",
-                "teacher": "Professor Purple",
-                "room": "Room 104"
-            },
-            "P5": {
-                "subject": "Science",
-                "teacher": "Professor Magenta",
-                "room": "Room 201"
-            },
-            "P6": {
-                "subject": "History",
-                "teacher": "Professor Green",
-                "room": "Room 202"
-            },
-            "S1": {
-                "subject": "Maths",
-                "teacher": "Professor Gold",
+                "teacher": "Professor Grey",
                 "room": "Room 203"
             },
-            "S2": {
+            "P5": {
                 "subject": "Geography",
                 "teacher": "Professor Indigo",
                 "room": "Room 204"
             },
+            "P6": {
+                "subject": "History",
+                "teacher": "Professor Green",
+                "room": "Room 103"
+            },
+            "S1": {
+                "subject": "English",
+                "teacher": "Professor Olive",
+                "room": "Room 102"
+            },
+            "S2": {
+                "subject": "Maths",
+                "teacher": "Professor White",
+                "room": "Room 202"
+            },
             "S3": {
-                "subject": "Chemistry",
-                "teacher": "Professor Maroon",
-                "room": "Room 301"
+                "subject": "Physics",
+                "teacher": "Professor Navy",
+                "room": "Room 302"
             },
             "S4": {
                 "subject": "Geology",
                 "teacher": "Professor Pink",
-                "room": "Room 302"
+                "room": "Room 101"
             }
         },
         "7": {
             "P1": {
                 "subject": "English",
-                "teacher": "Professor Purple",
-                "room": "Room 101"
+                "teacher": "Professor Olive",
+                "room": "Room 102"
             },
             "P2": {
                 "subject": "English",
                 "teacher": "Professor Grey",
-                "room": "Room 102"
+                "room": "Room 301"
             },
             "P3": {
-                "subject": "Maths",
-                "teacher": "Professor White",
-                "room": "Room 103"
+                "subject": "Science",
+                "teacher": "Professor Magenta",
+                "room": "Room 303"
             },
             "P4": {
+                "subject": "Maths",
+                "teacher": "Professor White",
+                "room": "Room 201"
+            },
+            "P5": {
+                "subject": "English",
+                "teacher": "Professor Purple",
+                "room": "Room 101"
+            },
+            "P6": {
+                "subject": "History",
+                "teacher": "Professor Green",
+                "room": "Room 103"
+            },
+            "S1": {
                 "subject": "Maths",
                 "teacher": "Professor Gold",
                 "room": "Room 104"
             },
-            "P5": {
-                "subject": "English",
-                "teacher": "Professor Olive",
-                "room": "Room 201"
-            },
-            "P6": {
-                "subject": "Science",
-                "teacher": "Professor Magenta",
-                "room": "Room 202"
-            },
-            "S1": {
-                "subject": "History",
-                "teacher": "Professor Indigo",
-                "room": "Room 203"
-            },
             "S2": {
                 "subject": "History",
-                "teacher": "Professor Green",
-                "room": "Room 204"
+                "teacher": "Professor Indigo",
+                "room": "Room 202"
             },
             "S3": {
-                "subject": "Chemistry",
-                "teacher": "Professor Black",
-                "room": "Room 301"
+                "subject": "Biology",
+                "teacher": "Professor Navy",
+                "room": "Room 302"
             },
             "S4": {
                 "subject": "Economics",
-                "teacher": "Professor Navy",
-                "room": "Room 302"
+                "teacher": "Professor Maroon",
+                "room": "Room 204"
             }
         },
         "8": {
             "P1": {
-                "subject": "Maths",
-                "teacher": "Professor Gold",
-                "room": "Room 101"
-            },
-            "P2": {
-                "subject": "English",
-                "teacher": "Professor Olive",
-                "room": "Room 102"
-            },
-            "P3": {
-                "subject": "Maths",
-                "teacher": "Professor White",
-                "room": "Room 103"
-            },
-            "P4": {
                 "subject": "English",
                 "teacher": "Professor Purple",
-                "room": "Room 104"
+                "room": "Room 203"
+            },
+            "P2": {
+                "subject": "Science",
+                "teacher": "Professor Magenta",
+                "room": "Room 303"
+            },
+            "P3": {
+                "subject": "English",
+                "teacher": "Professor Grey",
+                "room": "Room 301"
+            },
+            "P4": {
+                "subject": "Maths",
+                "teacher": "Professor White",
+                "room": "Room 201"
             },
             "P5": {
                 "subject": "Geography",
                 "teacher": "Professor Indigo",
-                "room": "Room 201"
+                "room": "Room 101"
             },
             "P6": {
                 "subject": "English",
-                "teacher": "Professor Grey",
+                "teacher": "Professor Olive",
                 "room": "Room 202"
             },
             "S1": {
-                "subject": "Science",
-                "teacher": "Professor Magenta",
-                "room": "Room 203"
+                "subject": "Maths",
+                "teacher": "Professor Gold",
+                "room": "Room 104"
             },
             "S2": {
                 "subject": "History",
                 "teacher": "Professor Green",
-                "room": "Room 204"
+                "room": "Room 103"
             },
             "S3": {
-                "subject": "Chemistry",
-                "teacher": "Professor Maroon",
-                "room": "Room 301"
+                "subject": "Physics",
+                "teacher": "Professor Navy",
+                "room": "Room 302"
             },
             "S4": {
                 "subject": "Economics",
-                "teacher": "Professor Navy",
-                "room": "Room 302"
+                "teacher": "Professor Maroon",
+                "room": "Room 204"
             }
         }
     }
