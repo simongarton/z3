@@ -35,17 +35,10 @@ import time
 
 from z3 import Solver, sat, unsat
 
-from generate_timetable import (
-    build_constraints,
-    extract_timetable,
-    load_json,
-    write_class_timetables,
-    write_room_timetables,
-    write_teacher_timetables,
-)
+from generate_timetable import build_constraints, extract_timetable, load_json, write_all_timetables
 from optimisation_rules import RULES
 
-TIME_BUDGET_SECONDS = 300
+TIME_BUDGET_SECONDS = 30
 
 
 def load_rule_config(folder):
@@ -153,9 +146,7 @@ def main():
     with open(output_path, "w") as f:
         json.dump(timetable, f, indent=4)
 
-    write_class_timetables(folder, timetable, periods, days, classes, dir_name="classes_optimal")
-    write_teacher_timetables(folder, timetable, periods, days, teachers, dir_name="teachers_optimal")
-    write_room_timetables(folder, timetable, periods, days, rooms, dir_name="rooms_optimal")
+    write_all_timetables(folder, timetable, periods, days, classes, teachers, rooms, suffix="_optimal")
 
     print("Score breakdown:")
     grand_total = 0
@@ -167,7 +158,7 @@ def main():
     print(f"Total score: {grand_total}")
 
     print(f"Saved to {output_path}")
-    print("Wrote per-class, per-teacher and per-room markdown timetables to classes_optimal/, teachers_optimal/ and rooms_optimal/")
+    print("Wrote per-class, per-teacher and per-room markdown + PNG timetables to classes_optimal/, teachers_optimal/ and rooms_optimal/")
 
 
 if __name__ == "__main__":

@@ -17,6 +17,9 @@ import os
 
 from z3 import *
 
+from timetable_colors import build_color_maps
+from timetable_render import write_entity_timetables
+
 
 def load_json(folder, name):
     with open(os.path.join(folder, name)) as f:
@@ -130,91 +133,13 @@ def build_timetable(classes, teachers, rooms, periods, days):
     return extract_timetable(s.model(), ctx, rooms, days)
 
 
-def period_time(periods, period):
-    return f"{periods[period]['start_time']}-{periods[period]['end_time']}"
+def write_all_timetables(folder, timetable, periods, days, classes, teachers, rooms, suffix=""):
+    subjects = sorted({s for subs in classes.values() for s in subs})
+    color_maps = build_color_maps(list(classes.keys()), list(teachers.keys()), rooms, subjects)
 
-
-def safe_filename(name):
-    return name.replace(" ", "_") + ".md"
-
-
-def write_markdown_grid(path, title, days, periods, cell_text):
-    day_names = list(days.keys())
-    period_names = sorted(periods.keys(), key=int)
-
-    lines = [f"# {title}", ""]
-    lines.append("| Period | Time | " + " | ".join(day_names) + " |")
-    lines.append("|--------|------|" + "|".join(["------"] * len(day_names)) + "|")
-
-    for period in period_names:
-        row = [period, period_time(periods, period)]
-        for day in day_names:
-            if period not in [str(p) for p in days[day]]:
-                row.append("-")
-            else:
-                row.append(cell_text(day, period) or "*Free*")
-        lines.append("| " + " | ".join(row) + " |")
-
-    with open(path, "w") as f:
-        f.write("\n".join(lines) + "\n")
-
-
-def write_class_timetables(folder, timetable, periods, days, classes, dir_name="classes"):
-    class_dir = os.path.join(folder, dir_name)
-    os.makedirs(class_dir, exist_ok=True)
-
-    for class_name in classes:
-        def cell_text(day, period, class_name=class_name):
-            info = timetable[day][period][class_name]
-            return f"{info['subject']}<br>{info['teacher']}<br>{info['room']}"
-
-        write_markdown_grid(
-            os.path.join(class_dir, safe_filename(class_name)),
-            f"Timetable for {class_name}",
-            days,
-            periods,
-            cell_text,
-        )
-
-
-def write_teacher_timetables(folder, timetable, periods, days, teachers, dir_name="teachers"):
-    teacher_dir = os.path.join(folder, dir_name)
-    os.makedirs(teacher_dir, exist_ok=True)
-
-    schedule = {teacher_name: {} for teacher_name in teachers}
-    for day, day_periods in timetable.items():
-        for period, entries in day_periods.items():
-            for class_name, info in entries.items():
-                schedule[info["teacher"]][(day, period)] = f"{class_name}<br>{info['subject']}<br>{info['room']}"
-
-    for teacher_name in teachers:
-        write_markdown_grid(
-            os.path.join(teacher_dir, safe_filename(teacher_name)),
-            f"Timetable for {teacher_name}",
-            days,
-            periods,
-            lambda day, period, teacher_name=teacher_name: schedule[teacher_name].get((day, period)),
-        )
-
-
-def write_room_timetables(folder, timetable, periods, days, rooms, dir_name="rooms"):
-    room_dir = os.path.join(folder, dir_name)
-    os.makedirs(room_dir, exist_ok=True)
-
-    schedule = {room_name: {} for room_name in rooms}
-    for day, day_periods in timetable.items():
-        for period, entries in day_periods.items():
-            for class_name, info in entries.items():
-                schedule[info["room"]][(day, period)] = f"{class_name}<br>{info['subject']}<br>{info['teacher']}"
-
-    for room_name in rooms:
-        write_markdown_grid(
-            os.path.join(room_dir, safe_filename(room_name)),
-            f"Timetable for {room_name}",
-            days,
-            periods,
-            lambda day, period, room_name=room_name: schedule[room_name].get((day, period)),
-        )
+    write_entity_timetables(folder, timetable, periods, days, list(classes.keys()), "class", color_maps, f"classes{suffix}")
+    write_entity_timetables(folder, timetable, periods, days, list(teachers.keys()), "teacher", color_maps, f"teachers{suffix}")
+    write_entity_timetables(folder, timetable, periods, days, rooms, "room", color_maps, f"rooms{suffix}")
 
 
 def main():
@@ -236,14 +161,12 @@ def main():
     with open(output_path, "w") as f:
         json.dump(timetable, f, indent=4)
 
-    write_class_timetables(folder, timetable, periods, days, classes)
-    write_teacher_timetables(folder, timetable, periods, days, teachers)
-    write_room_timetables(folder, timetable, periods, days, rooms)
+    write_all_timetables(folder, timetable, periods, days, classes, teachers, rooms)
 
     total_slots = sum(len(p) for p in days.values())
     print(f"Generated a valid weekly timetable for {len(classes)} classes across {total_slots} day/period slots.")
     print(f"Saved to {output_path}")
-    print("Wrote per-class, per-teacher and per-room markdown timetables to classes/, teachers/ and rooms/")
+    print("Wrote per-class, per-teacher and per-room markdown + PNG timetables to classes/, teachers/ and rooms/")
 
 
 if __name__ == "__main__":

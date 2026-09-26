@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 z3-solver = "*"
+pillow = "*"
 
 [dev-packages]
 
