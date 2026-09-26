@@ -2,3 +2,4 @@
 Pipefile.lock
 .git/
 *mega_temp*.py
+part1.txt

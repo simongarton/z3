@@ -10,6 +10,7 @@ def get_data(line):
 
 def build_and_execute(line, index):
 
+    # this is what a line will look like, with variable numbers of each section
     # [.##.] (3) (1,3) (2) (2,3) (0,2) (0,1) {3,5,4,7}
 
     lights, buttons, joltages = get_data(line)
@@ -64,11 +65,11 @@ def build_and_execute(line, index):
     file_data.append("else:")
     file_data.append('    print("Problem is unsatisfiable")')
 
-
     script_name = f"mega_temp_script_{index}.py"
     with open(script_name, "w") as f:
         f.write("\n".join(file_data))
     subprocess.run(['python', script_name])
+    os.remove(script_name)
 
 
 with open("part1.txt", "r") as f:
