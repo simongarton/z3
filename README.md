@@ -168,9 +168,7 @@ It generates lots of output: both markdown ... here's Professor Black.
 | 7 | 12:30-13:15 | S3<br>Chemistry<br>Room 204 | S3<br>Chemistry<br>Room 301 | - | *Free* | S3<br>Chemistry<br>Room 301 |
 | 8 | 13:15-14:00 | *Free* | *Free* | - | *Free* | *Free* |
 
-... wow, he has a lot of free time ... and PNG files ...
-
-![example](timetable/classes_optimal/P1.png)
+... wow, he has a lot of free time ...
 
 Discussing further with Claude, it suggests optimizing each day individually - fair enough, give it a whirl.
 
@@ -197,9 +195,35 @@ But it came up with a new approach, instead of a max load, go for a min load - a
 | 7 | 12:30-13:15 | *Free* | S3<br>Chemistry<br>Room 301 | - | S3<br>Chemistry<br>Room 302 | *Free* |
 | 8 | 13:15-14:00 | S3<br>Chemistry<br>Room 301 | *Free* | - | S3<br>Chemistry<br>Room 303 | *Free* |
 
+Later on I asked Claude how to fix this - and basically it's time for Professor Black to go and do some training ;-)
+
+```
+Fix: searched all 28 candidate single-teacher/single-subject additions and found the best one — giving Professor Black a Science qualification raises the achievable ceiling from 173 to 223 (out of a theoretical max of 236), and as a side effect frees up Navy/Maroon/Pink's bandwidth too, lifting S3 from 15/38 to 32/38 even though S3 doesn't even take Science.
+```
+
 ### cp-sat and Google
 
+Around this time, Claude started telling me about Google's [CP-SAT](https://developers.google.com/optimization/cp/cp_solver) solver as being better for this specific task - `z3` is good for a range of constraint modelling, `cp-sat` is specific on scheduling.
 
+So I got Claude to implement the same problem with this new library - a big download.
+
+It worked really well - first finding the root problem with optimising the timetable, and then generating better solutions in seconds. I eventually saw from my diagrams that it was "cheating" and putting blocks of lessons together, so a class would do the same subject all day with the same teacher in the same room. That would be very boring - so I added a constraint that each class has to have each subject each day, and that was better.
+
+![S2](./S2-example.png)
+
+## conclusions
+
+A good use of an evening, learned heaps. Lots more to do, will see if I can revisit this again.
+
+## blog posts from Claude
+
+This page is all human-written, but I got Claude to write up 3 blog posts with diagrams.
+
+[Story](timetable-story.md) : the long story of what I did on that Saturday evening with the rain outside and the fire lit.
+
+[Timetable](timetable-generation.md) : a more focussed exploration of building up the timetable, all on `z3`
+
+[CPSat](timetable-cpsat.md)
 
 ## presentations
 
@@ -211,12 +235,10 @@ https://medium.com/suboptimally-speaking/school-timetabling-with-constraint-prog
 
 https://developers.google.com/optimization/scheduling/employee_scheduling
 
-
-
 ## older stuff
 
 https://ericpony.github.io/z3py-tutorial/guide-examples.htm
 
-This has a max/min example
+This has a max/min example:
 
 https://www.cs.toronto.edu/~victorn/tutorials/z3/SMT.html
