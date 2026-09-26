@@ -1,0 +1,14 @@
+{
+  "rule1": {
+    "plaintext": "If a teacher stays in the same room for their next period, that is good.",
+    "weight": 2
+  },
+  "rule2": {
+    "plaintext": "If a teacher has a break between periods, that is good.",
+    "weight": 1
+  },
+  "rule3": {
+    "plaintext": "If a class stays in the same room for their next period, that is good.",
+    "weight": 1
+  }
+}

@@ -1,8 +1,8 @@
 # generate_teachers.py
 #
 # Reads classes.json to find every subject taught across all classes, then
-# generates 15 teachers (named "Professor <Color>"), each able to teach
-# between 1 and 3 subjects. Every subject is guaranteed at least one
+# generates TEACHER_COUNT teachers (named "Professor <Color>"), each able to
+# teach between 1 and 3 subjects. Every subject is guaranteed at least one
 # teacher, so the resulting teachers.json is always usable for scheduling.
 
 import json
@@ -15,7 +15,7 @@ COLORS = [
     "Maroon", "Navy", "Olive", "Gold",
 ]
 
-TEACHER_COUNT = 15
+TEACHER_COUNT = 12
 MIN_SUBJECTS = 1
 MAX_SUBJECTS = 3
 

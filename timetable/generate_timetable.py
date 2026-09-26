@@ -23,7 +23,16 @@ def load_json(folder, name):
         return json.load(f)
 
 
-def build_timetable(classes, teachers, rooms, periods, days):
+def all_slots(days):
+    """Every (day, period) slot that actually exists this week, period as a string."""
+    return [(day, str(period)) for day, day_periods in days.items() for period in day_periods]
+
+
+def build_constraints(s, classes, teachers, rooms, periods, days):
+    """Add the hard rules (valid subject/teacher pairing, no double-booking) to
+    solver/optimizer `s`, and return the variables and lookups needed to read
+    a model back out, or to build further (soft) constraints on top."""
+
     class_names = list(classes.keys())
     teacher_names = list(teachers.keys())
     subjects = sorted({s for subs in classes.values() for s in subs})
@@ -31,8 +40,7 @@ def build_timetable(classes, teachers, rooms, periods, days):
     subject_index = {s: i for i, s in enumerate(subjects)}
     teacher_index = {t: i for i, t in enumerate(teacher_names)}
 
-    # every (day, period) slot that actually exists this week
-    slots = [(day, str(period)) for day, day_periods in days.items() for period in day_periods]
+    slots = all_slots(days)
 
     # for each class, the (subject_index, teacher_index) pairs that are
     # actually valid for it: the subject must be one it takes, and the
@@ -50,8 +58,6 @@ def build_timetable(classes, teachers, rooms, periods, days):
     subject_vars = {}
     teacher_vars = {}
     room_vars = {}
-
-    s = Solver()
 
     for day, period in slots:
         for class_name in class_names:
@@ -77,24 +83,51 @@ def build_timetable(classes, teachers, rooms, periods, days):
         s.add(Distinct([teacher_vars[(c, day, period)] for c in class_names]))
         s.add(Distinct([room_vars[(c, day, period)] for c in class_names]))
 
-    if s.check() != sat:
-        return None
+    return {
+        "class_names": class_names,
+        "teacher_names": teacher_names,
+        "subjects": subjects,
+        "teacher_index": teacher_index,
+        "subject_index": subject_index,
+        "subject_vars": subject_vars,
+        "teacher_vars": teacher_vars,
+        "room_vars": room_vars,
+    }
 
-    model = s.model()
+
+def extract_timetable(model, ctx, rooms, days):
+    class_names = ctx["class_names"]
+    teacher_names = ctx["teacher_names"]
+    subjects = ctx["subjects"]
+    subject_vars = ctx["subject_vars"]
+    teacher_vars = ctx["teacher_vars"]
+    room_vars = ctx["room_vars"]
+
     timetable = {day: {} for day in days}
-    for day, period in slots:
+    for day, period in all_slots(days):
         timetable[day][period] = {}
         for class_name in class_names:
-            subject_idx = model[subject_vars[(class_name, day, period)]].as_long()
-            teacher_idx = model[teacher_vars[(class_name, day, period)]].as_long()
-            room_idx = model[room_vars[(class_name, day, period)]].as_long()
+            # model_completion=True: on a timed-out Optimize, variables the
+            # solver never had to pin down are otherwise left unassigned
+            subject_idx = model.eval(subject_vars[(class_name, day, period)], model_completion=True).as_long()
+            teacher_idx = model.eval(teacher_vars[(class_name, day, period)], model_completion=True).as_long()
+            room_idx = model.eval(room_vars[(class_name, day, period)], model_completion=True).as_long()
             timetable[day][period][class_name] = {
                 "subject": subjects[subject_idx],
                 "teacher": teacher_names[teacher_idx],
                 "room": rooms[room_idx],
             }
-
     return timetable
+
+
+def build_timetable(classes, teachers, rooms, periods, days):
+    s = Solver()
+    ctx = build_constraints(s, classes, teachers, rooms, periods, days)
+
+    if s.check() != sat:
+        return None
+
+    return extract_timetable(s.model(), ctx, rooms, days)
 
 
 def period_time(periods, period):
@@ -126,8 +159,8 @@ def write_markdown_grid(path, title, days, periods, cell_text):
         f.write("\n".join(lines) + "\n")
 
 
-def write_class_timetables(folder, timetable, periods, days, classes):
-    class_dir = os.path.join(folder, "classes")
+def write_class_timetables(folder, timetable, periods, days, classes, dir_name="classes"):
+    class_dir = os.path.join(folder, dir_name)
     os.makedirs(class_dir, exist_ok=True)
 
     for class_name in classes:
@@ -144,8 +177,8 @@ def write_class_timetables(folder, timetable, periods, days, classes):
         )
 
 
-def write_teacher_timetables(folder, timetable, periods, days, teachers):
-    teacher_dir = os.path.join(folder, "teachers")
+def write_teacher_timetables(folder, timetable, periods, days, teachers, dir_name="teachers"):
+    teacher_dir = os.path.join(folder, dir_name)
     os.makedirs(teacher_dir, exist_ok=True)
 
     schedule = {teacher_name: {} for teacher_name in teachers}
@@ -164,8 +197,8 @@ def write_teacher_timetables(folder, timetable, periods, days, teachers):
         )
 
 
-def write_room_timetables(folder, timetable, periods, days, rooms):
-    room_dir = os.path.join(folder, "rooms")
+def write_room_timetables(folder, timetable, periods, days, rooms, dir_name="rooms"):
+    room_dir = os.path.join(folder, dir_name)
     os.makedirs(room_dir, exist_ok=True)
 
     schedule = {room_name: {} for room_name in rooms}

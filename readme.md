@@ -134,6 +134,19 @@ Result: 15 teachers generated, all 12 subjects covered, saved to timetable/teach
 
 Took 1m 13s to write the first script, to return "a" timetable.
 
+I came up with a good way to optimise it, and Claude added the appropriate flexible code for soft optimisations. Here I ran into my first real problem - hi Dad ! - the solution space is vast. So Claude suggested a time constraint and to track "the best so far"
+...
+
+Not sure this is going to work. If not, I will drop the teachers and rooms : I only have 10 classes.
+
+Ah, Claude suggests an improvement.
+
+```
+Found the real problem: a timed-out Optimize model isn't safe to use — variables Z3 never got around to pinning get filled in independently by "model completion," which can silently violate joint constraints like Distinct (I confirmed this: the "optimized" timetable had 10 classes sharing one teacher per slot, breaking the no-double-booking rule). I need a sounder approach: only ever trust models from a sat result, never unknown.
+
+I'll switch to iterative "solve, then strictly beat this score, repeat" using a plain Solver under a time budget — every accepted answer is a genuine sat result, so it's always valid; we just stop improving once we run out of time or provably hit the optimum.
+```
+
 ## presentations
 
 https://theory.stanford.edu/~nikolaj/nus.html#/sec-z3 gets into maths quickly.

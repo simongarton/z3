@@ -1,4 +1,4 @@
-# Timetable for Room 305
+# Timetable for Room 303
 
 | Period | Time | Monday | Tuesday | Wednesday | Thursday | Friday |
 |--------|------|------|------|------|------|------|
