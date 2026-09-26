@@ -128,7 +128,7 @@ def rule_teacher_same_room_next_period(ctx):
 
 The weighted sum of every active rule's count becomes the score to maximise. Once it's working, the effect is actually visible in the diagrams from Chapter 5: watch the accent-bar colour down a column of consecutive periods, and you can see the "stay in the same room" rule winning out in real time - Room 301's purple bar back-to-back on Monday periods 4 and 5 below, for instance, or Room 302's magenta on Wednesday periods 3 and 4:
 
-![Repeated accent-bar colours in adjacent periods - the "stay in the same room" rule visibly working](timetable/classes_optimal/P1.png)
+![Repeated accent-bar colours in adjacent periods - the "stay in the same room" rule visibly working](timetable-story-images/z3-optimal-p1-344.png)
 
 Here's the part that genuinely surprised us. Z3's own `Optimize()` has a built-in `timeout`, and it's supposed to hand back the best solution found so far even if it times out before *proving* that's the best possible. In testing, it did return a model - but with 15 largely-interchangeable teachers and rooms, the timed-out model had left some variables unassigned, and completing them independently silently broke a hard rule: two classes ended up sharing the same teacher at the same time. A model that *looks* optimised but is secretly invalid is worse than no model at all.
 
@@ -162,6 +162,14 @@ The final approach split the difference: a hard minimum-load floor in the plain 
 
 > **Update:** a later experiment porting this same model to Google OR-Tools' CP-SAT settled the question properly. The maximum cap wasn't just hard for Z3 - it was genuinely infeasible, and CP-SAT proved it in well under a second. Minimising each teacher's load individually revealed why: 8 of the 12 teachers are mathematically forced to teach every single one of the 38 periods, because a specific block of classes can only ever be covered by exactly those 8 people, with no qualification slack to spare. "Extremely expensive to prove" and "impossible" look identical from the outside when a solver times out - it took a second solver to tell them apart.
 
+## Chapter 10: A different solver
+
+That CP-SAT experiment deserved its own post (see the companion piece), but the short version: the same model, ported to a constraint-programming solver built specifically for scheduling-shaped problems, solved the base problem faster, proved the load cap infeasible in half a second flat, and reached an optimiser score roughly 2.8x higher than Z3's best, with a genuine, provable gap to the true optimum - something Z3's own optimiser could never report. None of it means Z3 was the wrong choice to start with; it means a general-purpose solver and a purpose-built one can feel identical right up until a problem leans hard on exactly the thing the specialist was built for.
+
+## Chapter 11: One subject, all day
+
+The diagrams caught one last thing the score never flagged: some classes were getting the same single subject, every period, all week - Room 302, Chemistry, forever. A new rule ("every subject a class studies should be taught at least once a day") barely helped at first, and turning its weight up further didn't help either - because it wasn't a weighting problem. Making that rule the *only* thing being optimised for showed the true ceiling was already reached, proven in one second. Room scarcity looked like the obvious cause and wasn't - doubling the shared lab rooms changed nothing. The real cause traced straight back to Chapter 9's discovery: two classes were entirely dependent on the four teachers not already saturated elsewhere, and those four only knew five of the school's twelve subjects between them. Searching every way of adding one subject to one of those four teachers found the fix - one new qualification, and both classes went from repeating one or two subjects all week to genuine variety across the timetable.
+
 ## Where that leaves things
 
 The finished system, walking backwards from that first `solve(x + 2 == 4)`:
@@ -170,5 +178,7 @@ The finished system, walking backwards from that first `solve(x + 2 == 4)`:
 - a configurable, weighted soft-optimisation layer, driven entirely by two small JSON files, extensible by adding a rule id and a matching Python function
 - a bounded, correctness-first search loop that never trusts a model it can't verify
 - markdown and colour-coded PNG diagrams per class, teacher and room, designed around a single question: can you glance at this and see the pattern you're looking for?
+- a second solver backend for exactly the problems Z3's general-purpose design struggled with
+- a staffing gap tracked down not by guessing, but by proving a ceiling, ruling out the obvious suspect, and testing every minimal fix for the real one
 
 The same 12 lines of Z3 from Chapter 1 - declare variables, describe rules, ask for a model - are still exactly what's happening underneath all of it. Everything since then has just been about which rules are worth stating, and learning, sometimes the hard way, which ways of stating them a solver can actually chew through.

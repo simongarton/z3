@@ -135,6 +135,20 @@ The fix that seemed obvious - cap everyone's maximum load - turned out to be far
 
 > **Update:** trying the same problem in Google OR-Tools' CP-SAT (see the companion post on that) settled this properly. The max-load cap wasn't merely hard for Z3 - it was *impossible*, and CP-SAT proved that in well under a second. Using `Minimize()` on each teacher's load individually showed that 8 of the 12 teachers (everyone except the four who cover S3/S4's extra subjects) are mathematically forced to teach every single one of the 38 periods: classes P1-P6, S1 and S2 collectively can only ever be covered by exactly those 8 people, with zero slack in the qualifications to spare. A cap below 38 was never on the table, in either solver - Z3 just couldn't tell us that quickly, while CP-SAT could.
 
+### Step 6: The same subject, all day, every day
+
+Looking at the actual diagrams turned up a new problem the score never flagged: several classes were getting the *same single subject* for every period of the day, day after day - technically valid, obviously not what a real school would do. The fix looked simple: add a fifth rule rewarding "every subject a class studies should be taught at least once a day." Necessarily *soft*, not hard - S3 has 8 subjects but Wednesday only has 6 periods, and S4 has 9 subjects but no day has more than 8, so a literal requirement would just make those two classes infeasible.
+
+The first attempt (weight 5) barely moved the needle for the two worst-affected classes, so the obvious next move was to weight it higher. Before doing that blindly, it was worth checking *why* it wasn't working - and the answer was surprising: with rule5 as the *only* objective (no competing rules at all), CP-SAT proved the true maximum was exactly 173, in one second. Tripling the weight to 15 produced the identical 173. It wasn't a weighting problem at all - it was a hard ceiling, and no amount of reprioritising was ever going to raise it.
+
+The obvious next suspect was room scarcity - Biology, Chemistry, Physics and Science all share the same 3 lab rooms, and those are exactly the subjects the affected classes kept repeating. Directly testing it (temporarily giving those subjects 5 rooms each instead of 3, matching Biology's already-larger allowance) changed nothing: still 173. Rooms were a red herring.
+
+The real cause turned out to be a direct consequence of Step 5's fairness investigation: 8 of the 12 teachers are already fully committed to P1-P6/S1/S2 with zero spare capacity, ever. That leaves only 4 "free" teachers (the ones covering S3/S4's extra subjects), and between them they only know 5 of the 12 subjects on the timetable. S3 and S4 were never choosing to repeat Biology/Chemistry/Physics or Economics/Geology - those were *the only subjects any available teacher could give them*, in every single valid timetable, full stop.
+
+Once the actual bottleneck was identified, the fix was searching all 28 ways of adding one subject to one of the four free teachers, and picking the biggest win: giving Professor Black a Science qualification raised the ceiling from 173 to 223 out of a theoretical 236 - and, as a side effect of freeing up the other three free teachers' time, lifted S3 from 15/38 to 32/38 too, even though S3 doesn't take Science at all. One qualification, added to the right person, fixed two classes' problem.
+
+Re-running Z3's own optimiser with the new rule and the new roster showed real but more modest gains than CP-SAT achieved on the identical setup - S3 rose from 11/38 to 20/38, S4 from 10/38 to 23/38, well short of CP-SAT's 32/38 and 31/38 on the same rules and the same data. The gap tracks with everything Step 3 already found: Z3's day-split search has less room to trade off room-continuity against subject variety than a single whole-week CP-SAT search does.
+
 ## Where that leaves it
 
 What started as "can 10 classes be given a valid weekly schedule" ended up as a small system with:
@@ -143,5 +157,6 @@ What started as "can 10 classes be given a valid weekly schedule" ended up as a 
 - a configurable, weighted layer of soft preferences on top of that, searched for safely and verifiably
 - diagrams designed around answering one specific question at a glance
 - a genuine fairness constraint, chosen only after discovering empirically which direction (a floor, not a ceiling) a solver could actually handle
+- a staffing gap found not by guessing but by proving a ceiling, ruling out the obvious suspect (rooms), and searching every minimal fix for the real one (a teacher's missing qualification)
 
 None of it required trying even a tiny fraction of that 10^1215-sized space. It just required being precise about the rules.

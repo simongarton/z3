@@ -55,17 +55,29 @@ The pay-off for that verbosity: the day-splitting workaround and the hand-rolled
 
 The quality difference shows up visually too. Here's the same class's Monday-to-Friday schedule from each optimiser's best result:
 
-![Z3's day-split optimum for class P1 - a valid but choppier schedule](timetable/classes_optimal/P1.png)
+![Z3's day-split optimum for class P1 - a valid but choppier schedule](timetable-story-images/z3-optimal-p1-344.png)
 
-![CP-SAT's optimum for the same class - clean, near-optimal room continuity](timetable/classes_cpsat_optimal/P1.png)
+![CP-SAT's optimum for the same class - clean, near-optimal room continuity](timetable-story-images/cpsat-optimal-p1-970.png)
 
 The CP-SAT version keeps P1 in the *same room all day, every day* - Room 102 on Monday and Thursday, Room 104 on Tuesday and Wednesday, Room 201 on Friday. That's rule1 and rule3 (room continuity) essentially maxed out, not just nudged in the right direction.
+
+**4. A daily-variety rule, and the same investigative pattern paying off again.** A later look at the diagrams found something the score never flagged: some classes were getting the *same single subject* for every period, every day. Adding a rule to reward daily variety barely helped at first - which turned out not to be a weighting problem at all. Making that rule CP-SAT's *only* objective, with nothing else competing for priority, proved the true ceiling was exactly 173 (out of a possible 236), solved to `OPTIMAL` in 1 second. No amount of extra weight was ever going to move a number that a solver had already proven was the hard maximum - the same lesson from the load-cap experiment, just showing up somewhere new.
+
+![Before: S3 gets Chemistry, every period, all week](timetable-story-images/s3-before-rule5.png)
+
+Testing the obvious suspect - the 3 shared lab rooms - directly (temporarily giving those subjects 5 rooms each instead of 3) changed nothing at all. The real cause was the teacher-saturation fact from the bonus discovery below, showing up in practice: two classes (S3, S4) can only ever be taught by the 4 teachers who aren't already fully booked elsewhere, and those 4 only know 5 of the school's 12 subjects between them. Searching all 28 ways of adding one subject to one of those 4 teachers found the best fix - giving one teacher a Science qualification lifted the ceiling to 223, and CP-SAT reached 219 of it in the same 60-second budget:
+
+![After: real variety across the week, once the actual bottleneck was fixed](timetable-story-images/s3-after-rule5.png)
+
+Z3, re-run on the identical new rule and roster, improved too (S3 from 11/38 to 20/38, S4 from 10/38 to 23/38) but nowhere near as far as CP-SAT's 32/38 and 31/38 on the same inputs - the same day-split search limitation from result 3, showing up again on a different rule.
 
 ## The bonus discovery
 
 Chasing down *why* the load cap was infeasible turned into the most interesting result of the whole experiment. Using CP-SAT's `Minimize()` on each teacher's weekly load individually (each check taking well under a minute) showed that 8 of the school's 12 teachers have a **minimum possible load of exactly 38** - every single period of the week, in *every* valid timetable, no exceptions. Only 4 teachers (the ones covering the extra subjects only two classes take - Biology, Chemistry, Physics, Geology, Economics) have any real flexibility at all.
 
 The reason is a textbook example of Hall's marriage theorem: eight of the ten classes (P1 through P6, S1, S2) have subject lists that, between them, are only ever teachable by exactly eight specific teachers - no more, no fewer. There's no slack in that group at all, so all eight of those teachers must be booked in every period, forever. It's a fact about the *data*, not the *solver* - but it took a solver that could answer an infeasibility question in half a second, rather than time out after ninety, to actually find it.
+
+That same fact turned out to have a direct, practical consequence a little later (see result 4 above): the two classes outside that group of eight, S3 and S4, are entirely dependent on the four teachers who *aren't* in it - which is exactly why they kept getting stuck repeating the same one or two subjects all week, and exactly what pointed at the fix.
 
 ## What this doesn't mean
 
