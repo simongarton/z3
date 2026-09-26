@@ -1,0 +1,31 @@
+{
+  "P1": ["English", "Maths", "Science"],
+  "P2": ["English", "Maths", "Science"],
+  "P3": ["English", "Maths", "Science"],
+  "P4": ["English", "Maths", "Science"],
+  "P5": ["English", "Maths", "Science", "Geography"],
+  "P6": ["English", "Maths", "Science", "History"],
+  "S1": ["English", "Maths", "Science", "History", "Geography", "Art"],
+  "S2": ["English", "Maths", "Science", "History", "Geography", "Art"],
+  "S3": [
+    "English",
+    "Maths",
+    "Biology",
+    "Chemistry",
+    "Physics",
+    "History",
+    "Geography",
+    "Art"
+  ],
+  "S4": [
+    "English",
+    "Maths",
+    "Science",
+    "History",
+    "Geography",
+    "Art",
+    "Geology",
+    "Economics",
+    "Business Studies"
+  ]
+}

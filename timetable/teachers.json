@@ -1,0 +1,67 @@
+{
+    "Professor Blue": [
+        "Biology",
+        "History"
+    ],
+    "Professor Teal": [
+        "History",
+        "Geography"
+    ],
+    "Professor Indigo": [
+        "Biology",
+        "Chemistry"
+    ],
+    "Professor Navy": [
+        "Business Studies",
+        "Geography",
+        "Science"
+    ],
+    "Professor Olive": [
+        "Economics",
+        "English"
+    ],
+    "Professor Violet": [
+        "History",
+        "Chemistry"
+    ],
+    "Professor Maroon": [
+        "Maths",
+        "Geology",
+        "Physics"
+    ],
+    "Professor Cyan": [
+        "Maths",
+        "Geography",
+        "History"
+    ],
+    "Professor Grey": [
+        "Economics",
+        "History",
+        "English"
+    ],
+    "Professor Gold": [
+        "Science",
+        "Geography",
+        "Biology"
+    ],
+    "Professor Orange": [
+        "Geology",
+        "English",
+        "Chemistry"
+    ],
+    "Professor Green": [
+        "History"
+    ],
+    "Professor Magenta": [
+        "English",
+        "Maths"
+    ],
+    "Professor Pink": [
+        "Geography"
+    ],
+    "Professor Red": [
+        "Art",
+        "Geology",
+        "English"
+    ]
+}

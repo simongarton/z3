@@ -66,6 +66,72 @@ Now I'm working up to the actual example I want to solve.  Here's a halfway step
 
 I'm a student at a university. I want to first list all combinations of courses offered that I could take - they happen on certain days and times, and I need to avoid clashes - and then second optimise it, so I'm spending the most possible time in class (doh !)
 
+The course data looks like this:
+```
+{
+        "id": 100,
+        "name": "Course 100",
+        "schedule": [
+            "Monday 3:00-4:00",
+            "Tuesday 2:00-3:00",
+            "Wednesday 2:00-3:00",
+            "Thursday 2:00-3:00"
+        ]
+    }
+```
+
+Now **Claude** enters the chat. I handwrote the [course data generator](courses/generate_course_data.py) and then got Claude to write the other two scripts, possibles and best.
+
+For the [combinations](courses/generate_combinations.py), it did something clever - it generated a list of conflicts - double nested loop though courses, and note which pairs share a time slot. This can be used as a constraints to limit which combinations are allowed.
+
+_And this is where the current Ai models are so worth it_ ... because I can then ask Claude to explain, slowly and patiently, what it's doing. Which is basically solving the problem, getting the first solution, _then adding a new constraint_ saying "don't give me this one again ..."
+
+Clever.
+
+The second part basically [optimises](courses/generate_max_time_combinations.py) for the highest time in class, and then iterates through to find all combinations that match it. And with the small data set, there was one option.
+
+```
+┌─────────────┬──────────┬───────────┬───────────┬──────────┬──────────┐
+│    Time     │  Monday  │  Tuesday  │ Wednesday │ Thursday │  Friday  │
+├─────────────┼──────────┼───────────┼───────────┼──────────┼──────────┤
+│ 9:00-10:00  │          │ Course 10 │           │ Course 5 │          │
+├─────────────┼──────────┼───────────┼───────────┼──────────┼──────────┤
+│ 10:00-11:00 │ Course 7 │           │ Course 7  │          │ Course 7 │
+├─────────────┼──────────┼───────────┼───────────┼──────────┼──────────┤
+│ 11:00-12:00 │ Course 8 │           │           │          │ Course 8 │
+├─────────────┼──────────┼───────────┼───────────┼──────────┼──────────┤
+│ 1:00-2:00   │          │ Course 7  │           │ Course 3 │          │
+├─────────────┼──────────┼───────────┼───────────┼──────────┼──────────┤
+│ 2:00-3:00   │ Course 9 │ Course 5  │ Course 3  │ Course 8 │ Course 5 │
+├─────────────┼──────────┼───────────┼───────────┼──────────┼──────────┤
+│ 3:00-4:00   │ Course 3 │ Course 3  │ Course 10 │ Course 7 │          │
+└─────────────┴──────────┴───────────┴───────────┴──────────┴──────────┘
+```
+
+Mwah hah ha
+
+### finally, the timetable
+
+My dad was a headmaster and every summer he would have to disappear into his office and set the timetable. Our schools would have a fixed number of classrooms; a fixed number of teachers with certain skills (mostly one subject, sometimes two); a fixed number of classes, which had certain students in them. Including me. And each class needs to be taught certain subjects.
+
+Now: we can - at this point - ignore the students in each class. And there will be more classrooms than classes. I might add a constraint later that certain subjects can only happen in certain rooms. And in reality, certain teachers could only teach certain classes - a primary school teacher couldn't teach seniors.
+
+But I will add the obvious constraint that each class needs to have a lesson in every period : 8 periods in a day.
+
+I've got 10 classes - so I need at last 10 teachers. Let's give me 15 teachers and 15 rooms - ah, the good old days, when education was important. And funded.
+
+I asked Claude to create some teachers - and it's being sneaky, it can see where I'm going.
+
+```
+Created timetable/generate_teachers.py and ran it to produce timetable/teachers.json.
+
+- It reads classes.json and collects all 12 distinct subjects taught anywhere (English, Maths, Science, Geography, History, Art, Biology, Chemistry, Physics, Geology, Economics, Business Studies).
+- Generates 15 teachers named "Professor <Color>" (unique colors, no repeats), each assigned 1–3 subjects at random.
+- Guarantees every subject has at least one qualified teacher (adjusting a random teacher's list if a subject was missed by chance) — otherwise a timetable solver could hit an unsatisfiable subject later.
+
+Result: 15 teachers generated, all 12 subjects covered, saved to timetable/teachers.json.
+```
+
 ## presentations
 
 https://theory.stanford.edu/~nikolaj/nus.html#/sec-z3 gets into maths quickly.
