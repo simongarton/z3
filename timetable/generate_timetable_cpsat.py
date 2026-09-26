@@ -80,9 +80,11 @@ def build_model(classes, teachers, rooms, periods, days, subject_rooms):
         model.AddAllDifferent([room_vars[(c, day, period)] for c in class_names])
 
     ctx = {
+        "classes": classes,
         "class_names": class_names,
         "teacher_names": teacher_names,
         "subjects": subjects,
+        "subject_index": subject_index,
         "subject_vars": subject_vars,
         "teacher_vars": teacher_vars,
         "room_vars": room_vars,

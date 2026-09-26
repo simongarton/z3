@@ -14,5 +14,9 @@
   "rule4": {
     "plaintext": "Try to spread each day's lessons evenly across all teachers, rather than relying on the same few.",
     "weight": 1
+  },
+  "rule5": {
+    "plaintext": "Every subject a class studies should be taught at least once a day.",
+    "weight": 5
   }
 }

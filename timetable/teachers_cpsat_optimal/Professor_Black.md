@@ -2,11 +2,11 @@
 
 | Period | Time | Monday | Tuesday | Wednesday | Thursday | Friday |
 |--------|------|------|------|------|------|------|
-| 1 | 08:00-08:45 | S3<br>Chemistry<br>Room 302 | *Free* | S3<br>Chemistry<br>Room 301 | *Free* | *Free* |
-| 2 | 08:45-09:30 | S3<br>Chemistry<br>Room 302 | *Free* | S3<br>Chemistry<br>Room 301 | *Free* | *Free* |
-| 3 | 09:30-10:15 | S3<br>Chemistry<br>Room 302 | *Free* | S3<br>Chemistry<br>Room 301 | *Free* | *Free* |
-| 4 | 10:15-11:00 | *Free* | *Free* | S3<br>Chemistry<br>Room 301 | *Free* | *Free* |
-| 5 | 11:00-11:45 | *Free* | *Free* | S3<br>Chemistry<br>Room 301 | *Free* | *Free* |
-| 6 | 11:45-12:30 | *Free* | *Free* | S3<br>Chemistry<br>Room 301 | *Free* | *Free* |
-| 7 | 12:30-13:15 | *Free* | *Free* | - | *Free* | *Free* |
-| 8 | 13:15-14:00 | *Free* | *Free* | - | *Free* | *Free* |
+| 1 | 08:00-08:45 | P6<br>Science<br>Room 302 | P4<br>Science<br>Room 301 | P6<br>Science<br>Room 301 | P2<br>Science<br>Room 303 | P5<br>Science<br>Room 302 |
+| 2 | 08:45-09:30 | P1<br>Science<br>Room 302 | P4<br>Science<br>Room 301 | S2<br>Science<br>Room 301 | *Free* | P6<br>Science<br>Room 302 |
+| 3 | 09:30-10:15 | P5<br>Science<br>Room 302 | S1<br>Science<br>Room 301 | S1<br>Science<br>Room 301 | P4<br>Science<br>Room 303 | P3<br>Science<br>Room 302 |
+| 4 | 10:15-11:00 | P3<br>Science<br>Room 302 | P5<br>Science<br>Room 301 | P3<br>Science<br>Room 301 | P4<br>Science<br>Room 303 | P3<br>Science<br>Room 302 |
+| 5 | 11:00-11:45 | P3<br>Science<br>Room 302 | P5<br>Science<br>Room 301 | P4<br>Science<br>Room 301 | P4<br>Science<br>Room 303 | P4<br>Science<br>Room 302 |
+| 6 | 11:45-12:30 | P3<br>Science<br>Room 302 | P6<br>Science<br>Room 301 | P4<br>Science<br>Room 301 | P5<br>Science<br>Room 303 | P4<br>Science<br>Room 302 |
+| 7 | 12:30-13:15 | P3<br>Science<br>Room 302 | S4<br>Science<br>Room 301 | - | P5<br>Science<br>Room 303 | S1<br>Science<br>Room 302 |
+| 8 | 13:15-14:00 | P3<br>Science<br>Room 302 | P3<br>Science<br>Room 301 | - | P6<br>Science<br>Room 303 | S1<br>Science<br>Room 302 |

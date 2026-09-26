@@ -1,8 +1,14 @@
 # z3
 
-[z3](https://www.microsoft.com/en-us/research/project/z3-3/) is a constraints solver - it's got a fancy title, but basically allows you to express problems in certain logical ways, and quickly/efficiently solve.
+[z3](https://www.microsoft.com/en-us/research/project/z3-3/) is a constraints solver - it's got a fancy title "Satisfiability Modulo Theories", but basically allows you to express problems in certain logical ways, and quickly and efficiently solve them.
 
 There are [online playgrounds](https://microsoft.github.io/z3guide/) and support for various languages. I'm using Python's `z3` ... I see [z3-solver](https://github.com/z3prover/z3) shows up more easily in searches. Oh, they are the same, it's just the import is simpler.
+
+I ran into it last year during [Advent of Code](https://adventofcode.com/2025/day/10) - the second part of that day had a tree searching problem which was vast. I'd written code to solve the first part, I could see it wouldn't work for the second, so I went hunting for alternative approaches.
+
+I've been wanting to take a proper look at it again - I don't have a need for it at work, sadly, but I have a long-standing project to explore in the back of my head : my dad was a headmaster, and used to set timetables every summer. I wonder if we can use `z3` to solve it.
+
+Let's build up some knowledge from scratch.
 
 ## examples
 
@@ -54,7 +60,7 @@ Now we add some optimisation in : the minimal number of coins, now including pen
 
 The puzzle on day 10 of 2025 (https://adventofcode.com/2025/day/10) caused a fuss. You can solve part 2 in various ways, but doing it with Z3 was trivial - should it be allowed.
 
-Basically you have a bunch of buttons to press, each of which changes the voltage in certain ways - what's the minimum number of presses needed to do a certain thing ? Technically possible from first principles, but vast search space.
+Basically you have a bunch of buttons to press, each of which changes the voltage in certain ways - what's the minimum number of presses needed to do a certain thing ? Technically possible from first principles, but vast search space : I had code to do it, but I could see it wasn't go to finish in my lifetime.
 
 But I liked it, because I got to learn how to use z3.
 
@@ -108,7 +114,7 @@ The second part basically [optimises](courses/generate_max_time_combinations.py)
 └─────────────┴──────────┴───────────┴───────────┴──────────┴──────────┘
 ```
 
-Mwah hah ha
+Nice.
 
 ### finally, the timetable
 
@@ -147,9 +153,9 @@ Found the real problem: a timed-out Optimize model isn't safe to use — variabl
 I'll switch to iterative "solve, then strictly beat this score, repeat" using a plain Solver under a time budget — every accepted answer is a genuine sat result, so it's always valid; we just stop improving once we run out of time or provably hit the optimum.
 ```
 
-Now we're getting solutions in 30 seconds. I've tried a 5 minute run, and it didn't get better.
+Now we're getting solutions in 30 seconds. I've tried a 5 minute run, and it hasn't improved further.
 
-It generates lots of output: both markdown ...
+It generates lots of output: both markdown ... here's Professor Black.
 
 | Period | Time | Monday | Tuesday | Wednesday | Thursday | Friday |
 |--------|------|------|------|------|------|------|
@@ -166,17 +172,34 @@ It generates lots of output: both markdown ...
 
 ![example](timetable/classes_optimal/P1.png)
 
-Discussing further with Claude, it suggests optimizing each day individually - fair enough, give it a whirl. And now it will return a provably optimum solution (for those constraints) ... only it didn't, and Claude is very apologetic.
+Discussing further with Claude, it suggests optimizing each day individually - fair enough, give it a whirl.
+
+And now it will return a provably optimum solution (for those constraints) ... only it didn't, and Claude is very apologetic.
 
 Let's add a constraint : only certain rooms support Science, and the three sciences. And another room is needed for Art.
 
 Ok, that improved it signficantly - faster, and better score.
 
-But then - foolish, in hindsight - we tried to better. I noted that most teachers had 38 lessons, but Professor Black had just 7. Yes, he is a Chemistry teacher, but even so, could we make this fairer ?
+But then - foolish, in hindsight - we tried to make it better. I noted that most teachers had 38 lessons, but Professor Black had just 7. Yes, he is a Chemistry teacher, but even so, could we make this fairer ?
 
 Claude picked the wrong way to do it, I think - implementing a max load, which in turn meant there turned out to be no valid solutions. (I note that it's trying to get any solution first, before then trying to get a good one - which is a good approach.) From reading it's thinking, it's not sure why this is failing - it should be working. It added a cap of 38 - which is a full week - and it still timed out indicating the constraints are broken / interfering with each other.
 
-But it came up with a new approach, instead of a max load, go for a min load - and got a quick solution. It's now trying to see how high this can be set.
+But it came up with a new approach, instead of a max load, go for a min load - and got a quick solution. That then meant we could then try and improve it further - and we did. That's doubled his load.
+
+| Period | Time | Monday | Tuesday | Wednesday | Thursday | Friday |
+|--------|------|------|------|------|------|------|
+| 1 | 08:00-08:45 | *Free* | S3<br>Chemistry<br>Room 302 | *Free* | *Free* | *Free* |
+| 2 | 08:45-09:30 | *Free* | S3<br>Chemistry<br>Room 302 | S3<br>Chemistry<br>Room 302 | S3<br>Chemistry<br>Room 301 | *Free* |
+| 3 | 09:30-10:15 | S3<br>Chemistry<br>Room 303 | *Free* | *Free* | *Free* | S3<br>Chemistry<br>Room 303 |
+| 4 | 10:15-11:00 | S3<br>Chemistry<br>Room 303 | *Free* | *Free* | S3<br>Chemistry<br>Room 303 | *Free* |
+| 5 | 11:00-11:45 | *Free* | *Free* | *Free* | *Free* | S3<br>Chemistry<br>Room 303 |
+| 6 | 11:45-12:30 | S3<br>Chemistry<br>Room 302 | *Free* | *Free* | *Free* | *Free* |
+| 7 | 12:30-13:15 | *Free* | S3<br>Chemistry<br>Room 301 | - | S3<br>Chemistry<br>Room 302 | *Free* |
+| 8 | 13:15-14:00 | S3<br>Chemistry<br>Room 301 | *Free* | - | S3<br>Chemistry<br>Room 303 | *Free* |
+
+### cp-sat and Google
+
+
 
 ## presentations
 

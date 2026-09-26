@@ -15,7 +15,7 @@
 # only takes effect once a function for it is added to RULES below, and it's
 # referenced (with a weight) in optimisations.json.
 
-from z3 import And, If, Sum
+from z3 import And, If, Or, Sum
 
 
 def ordered_period_pairs(days):
@@ -94,6 +94,36 @@ def rule_class_same_room_next_period(ctx):
     return Sum(terms)
 
 
+def rule_subject_taught_daily(ctx):
+    """rule5: Every subject a class studies should be taught at least once
+    that day, wherever there are enough periods in the day to fit it in.
+
+    Counted as: for every class and every one of its subjects, on every
+    day, 1 if that subject appears in at least one of that day's periods,
+    else 0. A class with more subjects than a day has periods (S3 has 8
+    subjects but Wednesday only has 6; S4 has 9 subjects but no day has
+    more than 8 periods) can never hit its own maximum on that day - the
+    Or() below just can't be true for every subject at once, since each
+    period can only ever be one subject. That's fine: this is a soft
+    reward, not a hard requirement, so it still pushes hard for as much
+    daily variety as is actually possible without ever making the model
+    infeasible.
+    """
+    class_subjects = ctx["classes"]
+    subject_vars = ctx["subject_vars"]
+    subject_index = ctx["subject_index"]
+
+    terms = []
+    for day, day_periods in ctx["days"].items():
+        periods = [str(p) for p in day_periods]
+        for class_name, subjects in class_subjects.items():
+            for subject in subjects:
+                s_idx = subject_index[subject]
+                taught_today = Or([subject_vars[(class_name, day, period)] == s_idx for period in periods])
+                terms.append(If(taught_today, 1, 0))
+    return Sum(terms)
+
+
 FAIR_SHARE_SCALE = 20
 
 
@@ -152,4 +182,5 @@ RULES = {
     "rule2": rule_teacher_has_a_break,
     "rule3": rule_class_same_room_next_period,
     "rule4": rule_teacher_fair_daily_share,
+    "rule5": rule_subject_taught_daily,
 }

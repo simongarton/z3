@@ -103,6 +103,7 @@ def build_constraints(s, classes, teachers, rooms, periods, days, subject_rooms)
         s.add(Distinct([room_vars[(c, day, period)] for c in class_names]))
 
     return {
+        "classes": classes,
         "class_names": class_names,
         "teacher_names": teacher_names,
         "subjects": subjects,

@@ -172,9 +172,42 @@ def rule_teacher_fair_daily_share(model, ctx):
     return -scaled
 
 
+def rule_subject_taught_daily(model, ctx):
+    """rule5: Every subject a class studies should be taught at least once
+    that day, wherever there are enough periods to fit it in. Same idea and
+    same caveat as the Z3 version: a class with more subjects than a day
+    has periods (S3 on Wednesday; S4 on any day) can never hit its own
+    maximum that day, since each period can only be one subject - this
+    rewards getting as close as possible rather than requiring it outright.
+    """
+    class_subjects = ctx["classes"]
+    subject_vars = ctx["subject_vars"]
+    subject_index = ctx["subject_index"]
+
+    terms = []
+    for day, day_periods in ctx["days"].items():
+        periods = [str(p) for p in day_periods]
+        for class_name, subjects in class_subjects.items():
+            for subject in subjects:
+                s_idx = subject_index[subject]
+                period_bools = []
+                for period in periods:
+                    b = model.NewBoolVar(f"issubj_{class_name}_{subject}_{day}_{period}")
+                    model.Add(subject_vars[(class_name, day, period)] == s_idx).OnlyEnforceIf(b)
+                    model.Add(subject_vars[(class_name, day, period)] != s_idx).OnlyEnforceIf(b.Not())
+                    period_bools.append(b)
+
+                taught_today = model.NewBoolVar(f"taughtday_{class_name}_{subject}_{day}")
+                model.AddBoolOr(period_bools).OnlyEnforceIf(taught_today)
+                model.AddBoolAnd([b.Not() for b in period_bools]).OnlyEnforceIf(taught_today.Not())
+                terms.append(taught_today)
+    return sum(terms)
+
+
 RULES = {
     "rule1": rule_teacher_same_room_next_period,
     "rule2": rule_teacher_has_a_break,
     "rule3": rule_class_same_room_next_period,
     "rule4": rule_teacher_fair_daily_share,
+    "rule5": rule_subject_taught_daily,
 }
