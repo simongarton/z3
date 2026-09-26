@@ -1,6 +1,5 @@
 from z3 import *
 
-
 set_option(html_mode=True)
 x = Int('x')
 y = Int('y')
